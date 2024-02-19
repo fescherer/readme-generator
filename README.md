@@ -1,36 +1,211 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<a name="readme-top"></a>
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  <br />
+  <a href="https://github.com/fescherer/project-studies/tree/main/alura/game-dev">
+    <img src="https://user-images.githubusercontent.com/62115215/219967984-42253ac1-0f95-45ea-86ee-d29dfe050534.png" alt="Logo" width="80" height="80">
+  </a>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h3 align="center">Game Dev</h3>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<p align="center">
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This is a runner game made with [p5](https://p5js.org)
+<br />
+<a href="https://github.com/fescherer/project-studies"><strong>Explore the docs »</strong></a>
+<br />
+<br />
+<a href="#about">About</a>
+•
+<a href="#stack">Build With</a>
+•
+<a href="#install">Getting Started</a>
+•
+<a href="#usage">How to use</a>
+•
+<a href="#info">Info</a>
+•
+<a href="#contact">Contact me</a>
+•
+<a href="#contributors">Contributors</a>
+•
+<a href="#special-thanks">Special Thanks</a>
 
-## Learn More
+</p>
+</div>
 
-To learn more about Next.js, take a look at the following resources:
+<!-- **********************🐲About🐲********************** -->
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<a name="about"></a>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 📕 About 📕
 
-## Deploy on Vercel
+This was a runner game project developed in June, 22, 2020 - June, 26, 2020.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The very first javascript project made by me.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- **********************🐲Built With🐲********************** -->
+
+<a name="stack"></a>
+
+## 💻 Built With 💻
+
+<div align="center">
+
+[![Javascript][javascript]][javascript-url]
+[![P5][p5]][p5-url]
+
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- **********************🐲Getting Started🐲********************** -->
+
+<a name="install"></a>
+
+## 🚂 Getting Started 🚂
+
+To get this project up and running locally on your pc, follow the steps:
+
+### Installation
+
+1. Clone the repo
+  ```sh
+   git clone https://github.com/fescherer/project-studies.git
+  ```
+2. Go to project's folder
+
+  ```sh
+   cd alura/game-dev
+  ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- **********************🐲How to use🐲********************** -->
+
+<a name="usage"></a>
+
+## 🙋 How to use 🙋
+
+![Project Gif](https://user-images.githubusercontent.com/62115215/219967687-18ce6ec5-966e-4180-a5d4-c156bdaab702.gif)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- **********************🐲Info🐲********************** -->
+
+<a name="info"></a>
+
+## 🌎 Info 🌎
+
+Don't forget to leave a star if you like the project ✨
+
+<div align="center">
+
+[![MIT License][license-shield]][license-url]
+[![How to contribute][info-contribute-shield]][info-contribute-url]
+[![Create an issue][info-issues-shield]][info-issues-url]
+
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- **********************🐲Contact Me🐲********************** -->
+<a name="contact"></a>
+
+## 💬 Contact me 💬
+
+My name is Felipe Scherer. You can find my socials at [my Github profile](https://github.com/fescherer) 😸
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- **********************🐲Contributors🐲********************** -->
+
+<a name="contributors"></a>
+
+## 🤗 Contributors 🤗
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/fescherer">
+        <img src="https://github.com/fescherer.png" width="100px;" alt="Felipe Scherer Picture"/><br>
+        <sub>
+          <b>Felipe Scherer</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- **********************🐲Special Thanks🐲********************** -->
+
+<a name="special-thanks"></a>
+
+## 🤗 Special Thanks 🤗
+
+My thanks to the incredible instructors of this immersion. <3
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/guilhermesilveira">
+        <img src="https://github.com/guilhermesilveira.png" width="100px;" alt="Guilherme Silveira"/><br>
+        <sub>
+          <b>Guilherme Silveira</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/JulianaAmoasei">
+        <img src="https://github.com/JulianaAmoasei.png" width="100px;" alt="Juliana Amoasei"/><br>
+        <sub>
+          <b>Juliana Amoasei</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/peas">
+        <img src="https://github.com/peas.png" width="100px;" alt="Paulo Silveira"/><br>
+        <sub>
+          <b>Paulo Silveira</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Badges and Badges Link -->
+[contributors-shield]: https://img.shields.io/github/contributors/fescherer/project-studies.svg?style=for-the-badge
+[contributors-url]: https://github.com/fescherer/project-studies/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/fescherer/project-studies.svg?style=for-the-badge
+[forks-url]: https://github.com/fescherer/project-studies/network/members
+[stars-shield]: https://img.shields.io/github/stars/fescherer/project-studies.svg?style=for-the-badge
+[stars-url]: https://github.com/fescherer/project-studies/stargazers
+[issues-shield]: https://img.shields.io/github/issues/fescherer/project-studies.svg?style=for-the-badge
+[issues-url]: https://github.com/fescherer/project-studies/issues
+
+[license-shield]: https://img.shields.io/github/license/fescherer/project-studies.svg?style=for-the-badge
+[license-url]: https://github.com/fescherer/project-studies/blob/master/LICENSE
+[info-contribute-shield]: https://img.shields.io/badge/👋-How%20to%20contribute-blue.svg?style=for-the-badge
+[info-contribute-url]: https://github.com/fescherer/utils/blob/main/CONTRIBUTING.md
+[info-issues-shield]: https://img.shields.io/badge/🐞-How%20to%20create%20an%20issue-blue.svg?style=for-the-badge
+[info-issues-url]: https://github.com/fescherer/utils/blob/main/ISSUE.md
+
+<!-- https://github.com/Ileriayo/markdown-badges -->
+[p5]: https://img.shields.io/badge/p5.js-ED225D?style=for-the-badge&logo=p5.js&logoColor=FFFFFF
+[p5-url]: https://p5js.org
+[javascript]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
+[javascript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
