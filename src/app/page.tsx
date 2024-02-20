@@ -1,3 +1,4 @@
+'use client'
 import { SectionCard } from '@/components/section-card'
 import { AboutProject } from '@/features/about-project'
 import { BasicInformation } from '@/features/basic-information'
@@ -7,9 +8,11 @@ import { Contributors } from '@/features/contributors'
 import { FAQ } from '@/features/faq'
 import { GifsPrints } from '@/features/gifs-prints'
 import { HowToUse } from '@/features/how-to-use'
+import { Preview } from '@/features/preview'
 import { ProjectInfo } from '@/features/project-info'
 import { SpecialThanks } from '@/features/special-thanks'
 import { Summary } from '@/features/summary'
+import { FormProvider, useForm } from 'react-hook-form'
 
 const items = [
   {
@@ -71,21 +74,29 @@ const items = [
 ]
 
 export default function Home() {
-  return (
-    <main className="m-auto flex flex-col">
-      <h1>Markdown generator</h1>
+  const methods = useForm()
 
-      <div className="divide-y divide-solid">
-        {items.map(item => (
-          <SectionCard
-            key={item.title}
-            description={item.description}
-            title={item.title}
-          >
-            {item.children}
-          </SectionCard>
-        ))}
-      </div>
-    </main>
+  return (
+    <FormProvider {...methods}>
+      <main className="m-auto flex w-full max-w-5xl flex-col p-4">
+        <h1 className="text-3xl font-medium underline">Markdown generator</h1>
+
+        <div className="flex flex-col gap-1 md:flex-row">
+          <div className="divide-y divide-solid py-6">
+            {items.map(item => (
+              <SectionCard
+                key={item.title}
+                description={item.description}
+                title={item.title}
+              >
+                {item.children}
+              </SectionCard>
+            ))}
+          </div>
+
+          <Preview />
+        </div>
+      </main>
+    </FormProvider>
   )
 }

@@ -1,8 +1,11 @@
+import { ComboBoxResponsive } from '@/components/ui/combobox'
+
 export function BuildWith() {
   return (
     <div>
       <div>
         <label htmlFor="">Technologies</label>
+        <ComboBoxResponsive />
 
         <select name="" id="">
           <option value="react">react</option>

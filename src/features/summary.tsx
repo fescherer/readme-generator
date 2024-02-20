@@ -1,7 +1,7 @@
+import { FormFieldCheckbox } from '@/components/form-field-checkbox'
+
 export function Summary() {
   return (
-    <div>
-      <span>Summary</span>
-    </div>
+    <FormFieldCheckbox label="checkbox-preview" registerName="summary.hide" />
   )
 }

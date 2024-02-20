@@ -4,7 +4,7 @@ export function Footer() {
   const today = new Date()
 
   return (
-    <footer className="bg-slate-500 p-4 text-white">
+    <footer className="bg-zinc-900 p-4 text-white">
       <div className="m-auto flex max-w-screen-lg flex-col items-center">
         <small>
           Copyright © 🞄

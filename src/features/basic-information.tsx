@@ -1,25 +1,12 @@
+import { FormField } from '@/components/form-field'
+
 export function BasicInformation() {
   return (
     <div>
-      <div>
-        <label htmlFor="">Github repo owner</label>
-        <input type="text" />
-      </div>
-
-      <div>
-        <label htmlFor="">Github repo name</label>
-        <input type="text" />
-      </div>
-
-      <div>
-        <label htmlFor="">Short description</label>
-        <input type="text" />
-      </div>
-
-      <div>
-        <label htmlFor="">Project Image</label>
-        <input type="text" />
-      </div>
+      <FormField registerName="basicInformation.repoOwner" label="Github repo owner" required />
+      <FormField registerName="basicInformation.repoName" label="Github repo name" required />
+      <FormField registerName="basicInformation.shortDescription" label="Short description" required />
+      <FormField registerName="basicInformation.projectImage" label="Project Image" required />
     </div>
   )
 }

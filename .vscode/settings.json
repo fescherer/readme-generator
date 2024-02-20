@@ -16,4 +16,5 @@
   },
   "eslint.validate": ["javascript"],
   "prettier.enable": false,
+  "cSpell.enabled": false
 }
