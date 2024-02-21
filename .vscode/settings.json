@@ -14,6 +14,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
+  "css.lint.unknownAtRules": "ignore",
   "eslint.validate": ["javascript"],
   "prettier.enable": false,
   "cSpell.enabled": false

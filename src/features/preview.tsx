@@ -8,8 +8,17 @@ export function Preview() {
 
   return (
     <div className="relative">
-      <div className="sticky top-0 p-2">Preview</div>
-      <pre>{JSON.stringify(formsFields)}</pre>
+      <div className="sticky top-0 p-2">
+        Preview
+        <pre>{JSON.stringify(formsFields)}</pre>
+        <pre>{JSON.stringify(formsFields.basicInformation)}</pre>
+        <pre>{JSON.stringify(formsFields.summary)}</pre>
+        <pre>{JSON.stringify(formsFields.buildWith)}</pre>
+        {/* <pre>{JSON.stringify(formsFields)}</pre>
+      <pre>{JSON.stringify(formsFields)}</pre> */}
+
+      </div>
+
     </div>
   )
 }

@@ -1,20 +1,34 @@
 'use client'
 
-import { DetailedHTMLProps, InputHTMLAttributes } from 'react'
+import { FormControl, FormField, FormItem, FormLabel } from '@/components/ui/form'
+import { Switch } from '@/components/ui/switch'
 import { useFormContext } from 'react-hook-form'
 
-interface FormFieldCheckboxProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+interface FormFieldCheckboxProps {
   label: string
   registerName: string
 }
 
-export function FormFieldCheckbox({ label, registerName, ...props }: FormFieldCheckboxProps) {
-  const { register } = useFormContext()
-
+export function FormFieldCheckbox({ label, registerName }: FormFieldCheckboxProps) {
+  const { control } = useFormContext()
   return (
-    <div className="m-2 flex justify-between gap-1">
-      <label htmlFor={`checkbox ${label}`}>Hide summary</label>
-      <input type="checkbox" className="accent-slate-700" {...props} {...register(registerName)} />
-    </div>
+    <FormField
+      control={control}
+      name={registerName}
+      render={({ field }) => (
+        <FormItem className="flex flex-row items-center justify-between rounded-lg p-2">
+          <div className="space-y-0.5">
+            <FormLabel>{label}</FormLabel>
+          </div>
+
+          <FormControl>
+            <Switch
+              checked={field.value}
+              onCheckedChange={field.onChange}
+            />
+          </FormControl>
+        </FormItem>
+      )}
+    />
   )
 }
