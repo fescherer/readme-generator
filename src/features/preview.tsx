@@ -15,8 +15,8 @@ export function Preview() {
         <pre>{JSON.stringify(formsFields.summary)}</pre>
         <pre>{JSON.stringify(formsFields.aboutProject)}</pre>
         <pre>{JSON.stringify(formsFields.buildWith)}</pre>
-        {/* <pre>{JSON.stringify(formsFields.contactUs)}</pre>
-        <pre>{JSON.stringify(formsFields.contributors)}</pre>
+        <pre>{JSON.stringify(formsFields.contactUs)}</pre>
+        {/* <pre>{JSON.stringify(formsFields.contributors)}</pre>
         <pre>{JSON.stringify(formsFields.faq)}</pre>
         <pre>{JSON.stringify(formsFields.gifPrint)}</pre>
         <pre>{JSON.stringify(formsFields.howToUse)}</pre>

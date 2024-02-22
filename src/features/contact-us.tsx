@@ -1,41 +1,17 @@
+import { FormFieldCheckbox } from '@/components/form-field-checkbox'
+import { FormFieldWithSideButton } from '@/components/form-field-with-side-button'
+import { SOCIALTECH } from '@/util/social'
+
 export function ContactUs() {
   return (
     <div>
-      <div>
-        <label htmlFor="">Youtube</label>
-        <input type="text" />
-      </div>
+      <FormFieldCheckbox label="Hide Contact Us" registerName="contactUs.isContactUsHide" />
 
-      <div>
-        <label htmlFor="">Github</label>
-        <input type="text" />
-      </div>
-
-      <div>
-        <label htmlFor="">Tiktik</label>
-        <input type="text" />
-      </div>
-
-      <div>
-        <label htmlFor="">Twitter</label>
-        <input type="text" />
-      </div>
-
-      <div>
-        <label htmlFor="">Linkedin</label>
-        <input type="text" />
-      </div>
-
-      <div>
-        <label htmlFor="">Facebook</label>
-        <input type="text" />
-      </div>
-
-      <div>
-        <label htmlFor="">Pinterest</label>
-        <input type="text" />
-      </div>
-      ...
+      {
+        SOCIALTECH.map(social => (
+          <FormFieldWithSideButton key={social.value} badge={social.badge} value={social.value} registerName={`contactUs.${social.value}`} label={social.label} />
+        ))
+      }
     </div>
   )
 }
