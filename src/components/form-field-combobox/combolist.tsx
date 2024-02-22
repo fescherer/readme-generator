@@ -1,4 +1,4 @@
-import { TItem } from '@/@types/Combobox'
+import { TTechnology } from '@/@types/Combobox'
 import {
   Command,
   CommandEmpty,
@@ -12,7 +12,7 @@ import { FieldValues, UseFieldArrayAppend } from 'react-hook-form'
 
 type CombolistProps = {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>
-  items: TItem[]
+  items: TTechnology[]
   fields: Record<'id', string>[]
   append: UseFieldArrayAppend<FieldValues, string>
 }

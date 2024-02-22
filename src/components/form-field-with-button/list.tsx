@@ -3,12 +3,12 @@ import { LucideX } from 'lucide-react'
 import Image from 'next/image'
 import { UseFieldArrayRemove } from 'react-hook-form'
 
-type ChoosenListProps = {
+type ListProps = {
   fields: any
   remove: UseFieldArrayRemove
 }
 
-export function ChoosenList({ fields, remove }: ChoosenListProps) {
+export function List({ fields, remove }: ListProps) {
   return (
     <div className="mt-1 flex flex-wrap gap-2">
       {fields.map((item: TTechnology) => (

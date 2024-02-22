@@ -22,10 +22,10 @@ export function Form({ createNewTechFn }: FormpProps) {
   return (
     <div>
       <InputField label={{ label: 'Alt Name', id: 'alt' }} value={alt} setValue={setAlt} required />
-      <InputField label={{ label: 'Badge Link', id: 'badge' }} value={link} setValue={setLink} required />
-      <InputField label={{ label: 'Doc link', id: 'doc' }} value={badge} setValue={setBadge} required />
+      <InputField label={{ label: 'Badge Link', id: 'badge' }} value={badge} setValue={setBadge} required />
+      <InputField label={{ label: 'Doc link', id: 'doc' }} value={link} setValue={setLink} required />
 
-      <button type="button" className="button w-full whitespace-nowrap text-sm" onClick={onSubmit}>
+      <button type="button" className="button-fill w-full whitespace-nowrap text-sm" onClick={onSubmit}>
         Add technology
       </button>
     </div>

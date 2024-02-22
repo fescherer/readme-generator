@@ -15,12 +15,12 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover'
 import { Combolist } from './combolist'
-import { TItem } from '@/@types/Combobox'
+import { TTechnology } from '@/@types/Combobox'
 import { useFieldArray, useFormContext } from 'react-hook-form'
 import { ChoosenList } from './choosen-list'
 
 type FormFieldComboboxProps = {
-  items: TItem[]
+  items: TTechnology[]
   registerName: string
 }
 
@@ -37,7 +37,7 @@ export function FormFieldCombobox({ items, registerName }: FormFieldComboboxProp
   if (isDesktop) {
     return (
       <Popover open={open} onOpenChange={setOpen}>
-        <PopoverTrigger className="button">
+        <PopoverTrigger className="button-fill">
           + Add technology
         </PopoverTrigger>
 
@@ -52,7 +52,7 @@ export function FormFieldCombobox({ items, registerName }: FormFieldComboboxProp
 
   return (
     <Drawer open={open} onOpenChange={setOpen}>
-      <DrawerTrigger className="button">
+      <DrawerTrigger className="button-fill">
         + Add technology
       </DrawerTrigger>
 

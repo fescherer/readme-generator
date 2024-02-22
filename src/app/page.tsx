@@ -82,7 +82,7 @@ export default function Home() {
         <h1 className="text-3xl font-medium underline">Markdown generator</h1>
 
         <div className="flex flex-col gap-1 md:flex-row">
-          <div className="divide-y divide-solid py-6">
+          <div className="flex flex-col gap-4 py-4">
             {items.map(item => (
               <SectionCard
                 key={item.title}

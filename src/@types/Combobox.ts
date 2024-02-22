@@ -7,3 +7,10 @@ export type TFormFieldWithButtonValue = {
   label: string
   id: string
 }
+
+export type TTechnology = {
+  label: string
+  value: string
+  link: string
+  badge: string
+}

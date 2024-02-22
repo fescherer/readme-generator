@@ -17,7 +17,7 @@ export function InputField({ label, required, value, setValue, ...props }: Input
         <span className="text-red-500">{required && '*'}</span>
       </label>
 
-      <div className="my-2 flex items-center gap-2">
+      <div className="my-1 flex items-center gap-2">
         <input
           id={`form field ${label.label}`}
           className="rounded border border-zinc-300 bg-zinc-50 px-4 py-2 text-zinc-700 outline-none ring-offset-0 transition-all placeholder:text-zinc-300 invalid:border-red-600 hover:border-zinc-400 focus:border-transparent focus:ring-2 invalid:focus:ring-red-600"
