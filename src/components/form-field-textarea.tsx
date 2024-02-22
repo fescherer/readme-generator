@@ -1,15 +1,13 @@
-'use client'
-
-import { DetailedHTMLProps, InputHTMLAttributes } from 'react'
+import { DetailedHTMLProps, TextareaHTMLAttributes } from 'react'
 import { useFormContext } from 'react-hook-form'
 
-interface FormFieldProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+interface FormFieldTextareaProps extends DetailedHTMLProps<TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement> {
   label: string
   required?: boolean
   registerName: string
 }
 
-export function FormField({ label, registerName, required, ...props }: FormFieldProps) {
+export function FormFieldTextarea({ label, required, registerName }: FormFieldTextareaProps) {
   const { register } = useFormContext()
 
   return (
@@ -19,7 +17,7 @@ export function FormField({ label, registerName, required, ...props }: FormField
         <span className="text-red-500">{required && '*'}</span>
       </label>
 
-      <input className="input" type="text" {...props} {...register(registerName)} />
+      <textarea className="input w-full text-sm" style={{ minHeight: 100 }} {...register(registerName)} />
     </div>
   )
 }

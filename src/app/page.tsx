@@ -27,7 +27,7 @@ const items = [
   },
   {
     title: 'About Project',
-    description: '',
+    description: 'Give a nice description',
     children: <AboutProject />,
   },
   {

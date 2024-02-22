@@ -1,7 +1,7 @@
+import { FormFieldTextarea } from '@/components/form-field-textarea'
+
 export function AboutProject() {
   return (
-    <div>
-      <span>About Project</span>
-    </div>
+    <FormFieldTextarea registerName="aboutProject.description" label="Project description" required />
   )
 }
