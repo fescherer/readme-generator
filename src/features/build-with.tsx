@@ -11,6 +11,7 @@ export function BuildWith() {
 
       <div className="mt-4">
         <FormFieldWithButton
+          label="Add new technology"
           registerName="buildWith.otherTechnologies"
         />
       </div>

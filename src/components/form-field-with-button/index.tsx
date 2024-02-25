@@ -9,9 +9,10 @@ import { List } from './list'
 
 interface FormFieldWithButtonProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
   registerName: string
+  label: string
 }
 
-export function FormFieldWithButton({ registerName }: FormFieldWithButtonProps) {
+export function FormFieldWithButton({ registerName, label }: FormFieldWithButtonProps) {
   const { control } = useFormContext()
 
   const { fields, append, remove } = useFieldArray({
@@ -29,7 +30,7 @@ export function FormFieldWithButton({ registerName }: FormFieldWithButtonProps) 
         <Accordion.Item value="item-1">
           <Accordion.Header>
             <Accordion.Trigger className="button-outlined flex w-full items-center justify-between data-[state=open]:border-zinc-400">
-              <span>Add new technology</span>
+              <span>{label}</span>
               <LucideChevronDown size={14} />
             </Accordion.Trigger>
           </Accordion.Header>
