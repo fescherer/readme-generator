@@ -20,8 +20,8 @@ export function Preview() {
         <pre>{JSON.stringify(formsFields.faq)}</pre>
         {/* <pre>{JSON.stringify(formsFields.gifPrint)}</pre>
         <pre>{JSON.stringify(formsFields.howToUse)}</pre>
-        <pre>{JSON.stringify(formsFields.projectInfo)}</pre>
-        <pre>{JSON.stringify(formsFields.specialThanks)}</pre> */}
+      <pre>{JSON.stringify(formsFields.projectInfo)}</pre> */}
+        <pre>{JSON.stringify(formsFields.specialThanks)}</pre>
       </div>
 
     </div>
