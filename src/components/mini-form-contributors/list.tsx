@@ -1,4 +1,3 @@
-import { TTechnology } from '@/@types/Combobox'
 import { LucideX } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,20 +11,22 @@ type ListProps = {
 export function List({ fields, remove }: ListProps) {
   return (
     <div className="mt-1 flex flex-wrap gap-2">
-      {fields.map((item: TTechnology) => (
-        <div key={item.value} className="flex items-center rounded-full border p-1 pl-2 text-sm text-zinc-600">
-          <Link target="_blank" href={item.link}>
+      {fields.map((item: any) => (
+        <div key={item.github} className="relative flex flex-col items-center rounded border p-2 text-sm text-zinc-600 shadow-sm">
+          <Link target="_blank" href={`https://github.com/${item.github}`}>
             <Image
-              className="rounded-full"
-              src={item.badge}
+              className="rounded"
+              src={`https://github.com/${item.github}.png`}
               width={70}
               height={70}
-              alt={item.label}
+              alt={item.name}
               unoptimized
             />
           </Link>
 
-          <button className="p-2 transition-all hover:text-zinc-900" type="button" onClick={() => remove(fields.findIndex((field: TTechnology) => field.value === item.value))}>
+          <span>{item.name}</span>
+
+          <button className="absolute right-0 top-0 rounded bg-slate-100 p-1 transition-all hover:text-zinc-900" type="button" onClick={() => remove(fields.findIndex((field: any) => field.github === item.github))}>
             <LucideX size={16} />
           </button>
         </div>

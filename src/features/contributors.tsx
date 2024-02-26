@@ -1,15 +1,11 @@
+import { FormFieldCheckbox } from '@/components/form-field-checkbox'
+import { MiniFormContributors } from '@/components/mini-form-contributors'
+
 export function Contributors() {
   return (
     <div>
-      <div>
-        <label htmlFor="">Name</label>
-        <input type="text" />
-      </div>
-
-      <div>
-        <label htmlFor="">Github name</label>
-        <input type="text" />
-      </div>
+      <FormFieldCheckbox label="Hide Contributors" registerName="contributors.isContributorsHide" />
+      <MiniFormContributors label2="Display name" label1="Github username" registerName="contributors.contributors" />
     </div>
   )
 }
