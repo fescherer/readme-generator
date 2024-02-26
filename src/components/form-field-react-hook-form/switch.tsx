@@ -1,5 +1,5 @@
 import { Controller, useFormContext } from 'react-hook-form'
-import { Switch as SwitchPrimitive } from '../form-field/swich'
+import { Switch as SwitchPrimitive } from '../form-field/switch'
 
 type SwitchProps = {
   registerName: string
