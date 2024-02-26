@@ -1,7 +1,7 @@
-import { FormFieldTextarea } from '@/components/form-field-textarea'
+import { Textarea } from '@/components/form-field-react-hook-form/textarea'
 
 export function AboutProject() {
   return (
-    <FormFieldTextarea registerName="aboutProject.description" label="Project description" required />
+    <Textarea registerName="aboutProject.description" label="Project description" required />
   )
 }

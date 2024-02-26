@@ -7,10 +7,10 @@ export function Preview() {
   const formsFields = watch()
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <div className="sticky top-0 p-2">
         Preview
-        <pre>{JSON.stringify(formsFields)}</pre>
+        {/* <pre>{JSON.stringify(formsFields)}</pre> */}
         <pre>{JSON.stringify(formsFields.basicInformation)}</pre>
         <pre>{JSON.stringify(formsFields.summary)}</pre>
         <pre>{JSON.stringify(formsFields.aboutProject)}</pre>
@@ -22,8 +22,18 @@ export function Preview() {
         <pre>{JSON.stringify(formsFields.howToUse)}</pre>
         <pre>{JSON.stringify(formsFields.projectInfo)}</pre>
         <pre>{JSON.stringify(formsFields.specialThanks)}</pre>
-      </div>
 
+        <div>
+          <ul>
+            <li>text Form field</li>
+            <li>text area field</li>
+            <li>checkbox field</li>
+            <li>select</li>
+            <li>expansion</li>
+            <li>tabs</li>
+          </ul>
+        </div>
+      </div>
     </div>
   )
 }

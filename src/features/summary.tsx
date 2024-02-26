@@ -1,7 +1,7 @@
-import { FormFieldCheckbox } from '@/components/form-field-checkbox'
+import { Switch } from '@/components/form-field-react-hook-form/switch'
 
 export function Summary() {
   return (
-    <FormFieldCheckbox label="Hide summary" registerName="summary.isSummaryHide" />
+    <Switch registerName="summary.isHide" label="Hide summary" />
   )
 }

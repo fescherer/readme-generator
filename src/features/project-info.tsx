@@ -8,7 +8,7 @@ export function ProjectInfo() {
     <div>
       <FormFieldCheckbox label="Hide project info" registerName="projectInfo.isProjectInfoHide" />
 
-      <Tabs.Root>
+      <Tabs.Root defaultValue="badge">
         <Tabs.List className="flex justify-around divide-x rounded border border-zinc-400 text-sm text-zinc-400">
           <Tabs.Trigger value="badge" className="flex w-full justify-center p-2  data-[state=active]:bg-slate-200 data-[state=active]:text-slate-800">
             Badge
