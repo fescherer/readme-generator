@@ -1,17 +1,9 @@
+import { MiniFormFAQ } from '@/components/mini-form-faq'
+
 export function FAQ() {
   return (
     <div>
-      <div>
-        <label htmlFor="">Queestion</label>
-        <input type="text" />
-      </div>
-
-      <div>
-        <label htmlFor="">Answer</label>
-        <input type="text" />
-      </div>
-
-      <span>Pode adicionar mais campos</span>
+      <MiniFormFAQ label1="Question" label2="Answer" registerName="faq.faq" />
     </div>
   )
 }
