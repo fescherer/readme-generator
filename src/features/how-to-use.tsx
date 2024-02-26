@@ -1,15 +1,11 @@
+import { FormFieldCheckbox } from '@/components/form-field-checkbox'
+import { MiniFormText } from '@/components/mini-form-text'
+
 export function HowToUse() {
   return (
     <div>
-      deixar padrão o campo de clone,
-      <div>run, coloca a opção npm, yarn or pnpm</div>
-
-      <div>
-        <label htmlFor="">Mais campos</label>
-        <input type="text" />
-      </div>
-
-      <span>Pode adicionar mais campos</span>
+      <FormFieldCheckbox label="Hide How to use Step" registerName="howToUse.isHowToUseHide" />
+      <MiniFormText label="How to use Step" registerName="howToUse.howToUse" />
     </div>
   )
 }
