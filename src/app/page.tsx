@@ -74,14 +74,7 @@ const items = [
 ]
 
 export default function Home() {
-  const methods = useForm(
-  //   {
-  //   defaultValues:
-  //     {
-  //       howToUse: { howToUse: ['npm run dev'] },
-  //     },
-  // }
-  )
+  const methods = useForm()
 
   return (
     <FormProvider {...methods}>

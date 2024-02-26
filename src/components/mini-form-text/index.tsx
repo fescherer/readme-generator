@@ -16,6 +16,14 @@ export function MiniFormText({ registerName, label }: MiniFormTextProps) {
     name: registerName,
   })
 
+  // useEffect(() => {
+  //   if (fields.length === 0) {
+  //     append({ description: 'git clone <repo-name>' })
+  //     append({ description: 'pnpm install' })
+  //     append({ description: 'pnpm dev' })
+  //   }
+  // }, [append, fields.length])
+
   function addHowToUseStep() {
     append({ description: howToUseStep })
   }

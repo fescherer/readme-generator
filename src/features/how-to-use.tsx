@@ -5,7 +5,7 @@ export function HowToUse() {
   return (
     <div>
       <FormFieldCheckbox label="Hide How to use Step" registerName="howToUse.isHowToUseHide" />
-      <MiniFormText label="How to use Step" registerName="howToUse.howToUse" />
+      <MiniFormText label="How to use Step" registerName="howToUse.items" />
     </div>
   )
 }
