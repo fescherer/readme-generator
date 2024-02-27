@@ -2,6 +2,8 @@ import { SOCIALTECH } from '@/util/social'
 import { useState } from 'react'
 import { useFieldArray, useFormContext } from 'react-hook-form'
 import { List } from './list'
+import { TSelect } from '@/@types/select'
+import { Select } from '../form-field/select'
 
 type MiniFormProps = {
   registerName: string
@@ -10,7 +12,7 @@ type MiniFormProps = {
 
 export function MiniForm({ registerName, label }: MiniFormProps) {
   const [url, setURL] = useState('')
-  const [social, setSocial] = useState(SOCIALTECH[0].value)
+  const [social, setSocial] = useState<TSelect>(SOCIALTECH[0])
 
   const { control } = useFormContext()
   const { fields, append, remove } = useFieldArray({
@@ -19,19 +21,20 @@ export function MiniForm({ registerName, label }: MiniFormProps) {
   })
 
   function addBadge() {
-    const socialData = SOCIALTECH.find(socialTech => socialTech.value === social)
-    if (socialData)
-      append({ ...socialData, link: url })
+    if (social)
+      append({ ...social, link: url })
+  }
+
+  function handleSocial(item: string) {
+    const socialObj = SOCIALTECH.find(social => social.value === item)
+    if (socialObj) setSocial(socialObj)
   }
 
   return (
     <div>
       <div className="flex flex-col gap-1 border-l-2 border-zinc-300 pl-2">
-        <select value={social} onChange={e => setSocial(e.target.value)}>
-          {SOCIALTECH.map(item => (
-            <option key={item.value} value={item.value}>{item.label}</option>
-          ))}
-        </select>
+
+        <Select changeValue={handleSocial} fields={SOCIALTECH} value={social} />
 
         <div className="my-2 flex flex-col">
           <label htmlFor={`form field ${label}`} className="text-sm text-zinc-600">

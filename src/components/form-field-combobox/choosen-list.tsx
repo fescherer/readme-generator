@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { UseFieldArrayRemove } from 'react-hook-form'
 
 type ChoosenListProps = {
+
   fields: any
   remove: UseFieldArrayRemove
 }
