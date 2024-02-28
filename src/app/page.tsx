@@ -32,7 +32,7 @@ const items = [
   },
   {
     title: 'Build with',
-    description: 'Tecnologies used',
+    description: 'Technologies used',
     children: <BuildWith />,
   },
   {
@@ -47,12 +47,12 @@ const items = [
   },
   {
     title: 'FAQ',
-    description: 'QUESTIONS AND answers',
+    description: 'Questions and answers about your project',
     children: <FAQ />,
   },
   {
-    title: 'GIFS/PRINTS',
-    description: 'Gifs/Prints',
+    title: 'Gifs/Prints',
+    description: 'Gifs/Prints of your project',
     children: <GifsPrints />,
   },
   {
@@ -68,7 +68,7 @@ const items = [
   },
   {
     title: 'Special Thanks',
-    description: 'Give credtis for who help you',
+    description: 'Give credits for who help you',
     children: <SpecialThanks />,
   },
 ]

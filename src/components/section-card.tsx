@@ -11,9 +11,9 @@ export function SectionCard({
   children,
 }: PropsWithChildren<SectionCardProps>) {
   return (
-    <section className="rounded-sm border border-slate-200 bg-slate-100 p-2 shadow-sm">
-      <h2 className="text-xl font-medium">{title}</h2>
-      <p className="pb-2 text-base text-zinc-800">{description}</p>
+    <section className="rounded-sm border border-highlight/20 bg-foreground p-2 shadow-sm">
+      <h2 className="text-title">{title}</h2>
+      <p className="pb-2 text-subtitle">{description}</p>
       {children}
     </section>
   )

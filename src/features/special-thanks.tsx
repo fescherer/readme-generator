@@ -1,11 +1,38 @@
-import { FormFieldCheckbox } from '@/components/form-field-checkbox'
-import { MiniFormContributors } from '@/components/mini-form-contributors'
+import { Switch } from '@/components/form-field-react-hook-form/switch'
+import { GroupField } from '@/components/form-field/group-field'
+import { Text } from '@/components/form-field/text'
+import { useState } from 'react'
 
 export function SpecialThanks() {
+  const [githubProfile, setGithubProfile] = useState('')
+  const [name, setName] = useState('')
+
   return (
     <div>
-      <FormFieldCheckbox label="Hide Special Thanks" registerName="specialThanks.isSpecialThanksHide" />
-      <MiniFormContributors label2="Display name" label1="Github username" registerName="specialThanks.specialThanks" />
+      <Switch registerName="specialThanks.isHide" label="Hide Special Thanks" />
+
+      <GroupField
+        label="Add new special thanks"
+        btnLabel="Add special thanks"
+        displayType="image"
+        obj={{ link: `https://github.com/${githubProfile}`, badge: `https://github.com/${githubProfile}.png`, label: name }}
+        registerName="specialThanks.specialThanks"
+      >
+        <Text
+          label="Github username"
+          onChange={e => setGithubProfile(e.target.value)}
+          value={githubProfile}
+          placeholder="fennectales"
+        />
+
+        <Text
+          label="Display name"
+          onChange={e => setName(e.target.value)}
+          value={name}
+          placeholder="Fennec Tales"
+        />
+
+      </GroupField>
     </div>
   )
 }

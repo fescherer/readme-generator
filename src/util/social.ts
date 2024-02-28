@@ -1,6 +1,8 @@
 // Find more badges at https://github.com/Ileriayo/markdown-badges
 
-export const SOCIALTECH = [
+import { TSelect } from '@/@types/select'
+
+export const SOCIALTECH: TSelect[] = [
   {
     label: 'Youtube',
     value: 'youtube',

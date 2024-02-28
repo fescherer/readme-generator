@@ -8,7 +8,7 @@ interface TextareaProps extends DetailedHTMLProps<TextareaHTMLAttributes<HTMLTex
 export function Textarea({ label, required, children, ...props }: PropsWithChildren<TextareaProps>) {
   return (
     <div className="my-2 flex flex-col gap-1">
-      <label htmlFor={label} className="text-sm text-zinc-600">
+      <label htmlFor={label} className="text-form-placeholder">
         <span>{label}</span>
         <span className="text-red-500">{required && '*'}</span>
       </label>

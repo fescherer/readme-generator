@@ -14,12 +14,12 @@ type SelectListProps = {
 
 export function SelectList({ items, setOpen, selectItems, append }: SelectListProps) {
   return (
-    <Command className="flex size-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground">
+    <Command className="flex size-full flex-col overflow-hidden rounded-md bg-background text-form-value">
       <div className="flex items-center border-b px-3" cmdk-input-wrapper="">
         <Search className="mr-2 size-4 shrink-0 opacity-50" />
 
         <Command.Input
-          className="flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"
+          className="flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-form-placeholder disabled:cursor-not-allowed disabled:opacity-50"
         />
       </div>
 
@@ -29,7 +29,7 @@ export function SelectList({ items, setOpen, selectItems, append }: SelectListPr
         <Command.Group>
           {items.map(status => (
             <Command.Item
-              className="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+              className="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none aria-selected:bg-highlight/20 aria-selected:text-form-value data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
               key={status.value}
               value={status.value}
               onSelect={(value) => {

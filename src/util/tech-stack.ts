@@ -1,8 +1,8 @@
-import { TTechnology } from '@/@types/Combobox'
-
 // Find more badges at https://github.com/Ileriayo/markdown-badges
 
-export const TECHNOLOGIES: TTechnology[] = [
+import { TSelect } from '@/@types/select'
+
+export const TECHNOLOGIES: TSelect[] = [
   // Frameworks
   {
     label: 'React',

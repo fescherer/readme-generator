@@ -1,4 +1,3 @@
-import { cn } from '@/lib/utils'
 import * as SwitchPrimitives from '@radix-ui/react-switch'
 import React from 'react'
 
@@ -9,23 +8,17 @@ interface CheckboxProps {
 const Switch = React.forwardRef<
 React.ElementRef<typeof SwitchPrimitives.Root>,
 React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root> & CheckboxProps
->(({ className, label, ...props }, ref) => (
-  <div className="flex flex-row items-center justify-between rounded-lg">
-    <label className="w-full" htmlFor={label}>{label}</label>
+>(({ label }, ref) => (
+  <div className="my-4 flex flex-row items-center justify-between rounded-lg">
+    <label className="w-full text-sm" htmlFor={label}>{label}</label>
 
     <SwitchPrimitives.Root
       id={label}
-      className={cn(
-        'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-zinc-700 data-[state=unchecked]:bg-input mt-2 mb-4',
-        className
-      )}
-      {...props}
+      className="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border border-highlight/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-transparent data-[state=checked]:bg-form-value data-[state=unchecked]:bg-foreground-2"
       ref={ref}
     >
       <SwitchPrimitives.Thumb
-        className={cn(
-          'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0'
-        )}
+        className="pointer-events-none block size-5 rounded-full bg-foreground-2 ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:bg-form-placeholder"
       />
     </SwitchPrimitives.Root>
   </div>

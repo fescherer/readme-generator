@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`flex flex-col bg-slate-50 ${inter.className}`}>
+      <body className={`flex flex-col bg-background ${inter.className}`}>
         <Header />
 
         <ReadmeGeneratorProvider>
