@@ -22,7 +22,7 @@ export function BuildWith() {
         registerName="buildWith.buildWith"
         label="Add new technology"
         displayType="badge"
-        obj={{ alt, link, badge }}
+        obj={{ label: alt, link, badge }}
         btnLabel="Add technology"
       >
         <Text label="Alt Name" value={alt} onChange={e => setAlt(e.target.value)} placeholder="React logo" />

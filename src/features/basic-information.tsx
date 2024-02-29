@@ -6,15 +6,15 @@ export function BasicInformation() {
   return (
     <div>
       <Text
-        label="Github repo owner"
-        registerName="basicInformation.repoOwner"
+        label="Github repo (owner + repo name)"
+        registerName="basicInformation.repo"
         required
-        placeholder="fennectales"
+        placeholder="fennectales/markdown-readme-generator"
       />
 
       <Text
-        label="Github repo name"
-        registerName="basicInformation.repoName"
+        label="Project name"
+        registerName="basicInformation.projectName"
         required
         placeholder="Markdown Readme Generator"
       />
