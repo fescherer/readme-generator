@@ -69,6 +69,30 @@ export function getMarkdownCode(form: FieldValues) {
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+  <!-- **********************🐲Getting Started🐲********************** -->
+
+  <a name="install"></a>
+
+  ## 🚂 Getting Started 🚂
+
+  To get this project up and running locally on your pc, follow the steps:
+
+  ### Pre requisites
+
+  ${form?.howToUse?.howToUse?.map((item: TBadge) => `
+  \`\`\`
+  ${item.label}
+  \`\`\`
+  `)}
+
+  <!-- **********************🐲Gifs/Prints🐲********************** -->
+
+  <a name="usage"></a>
+
+  ## 🙋 Gifs/Prints 🙋
+
+  ${form?.gifsprints?.gifsprints?.map((item: TBadge) => `![${item.alt}](${item.badge})`)}
+
   <!-- Badges and Badges Link -->
   [contributors-shield]: https://img.shields.io/github/contributors/${form?.basicInformation?.repo}.svg?style=for-the-badge
   [contributors-url]: https://github.com/${form?.basicInformation?.repo}/graphs/contributors
@@ -82,3 +106,13 @@ export function getMarkdownCode(form: FieldValues) {
 
   return md
 }
+
+// Distributed under the MIT License. See LICENSE for more information.
+
+// Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contribution you make would be appreciated.
+
+//     Fork the Project
+//     Create your Feature Branch (git checkout -b feature/AmazingFeature)
+//     Commit your Changes (git commit -m 'Add some AmazingFeature')
+//     Push to the Branch (git push origin feature/AmazingFeature)
+//     Open a Pull Request

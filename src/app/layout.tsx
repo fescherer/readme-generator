@@ -5,7 +5,6 @@ import { ReactNode } from 'react'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ReadmeGeneratorProvider } from '@/context/readme-generator.context'
-import 'highlight.js/styles/default.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
