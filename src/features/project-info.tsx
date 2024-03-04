@@ -1,9 +1,17 @@
+'use client'
+
 import { Switch } from '@/components/form-field-react-hook-form/switch'
-import { Text } from '@/components/form-field-react-hook-form/text'
 import { Textarea } from '@/components/form-field-react-hook-form/textarea'
 import * as Tabs from '@radix-ui/react-tabs'
+import { useState } from 'react'
+import { Text } from '@/components/form-field/text'
+import { GroupField } from '@/components/form-field/group-field'
+import { useWatch } from 'react-hook-form'
 
 export function ProjectInfo() {
+  const [contributeText, setContributeText] = useState('')
+
+  const repo = useWatch({ name: 'basicInformation.repo' })
   return (
     <div>
       <Switch registerName="projectInfo.isHide" label="Hide project info" />
@@ -20,17 +28,16 @@ export function ProjectInfo() {
         </Tabs.List>
 
         <Tabs.Content value="badge">
-          <Text
-            label="License"
-            placeholder="https://github.com/fennectales/utils/blob/main/LICENSE"
-            registerName="projectInfo.license"
-          />
+          <GroupField registerName="projectInfo.license" label="Project License" btnLabel="Update License" displayType="badge" obj={{ link: `https://github.com/${repo}/blob/master/LICENSE`, badge: `https://img.shields.io/github/license/${repo}`, label: 'LICENSE' }} btnDisabled={!repo} />
 
-          <Text
-            label="Contribute"
-            placeholder="https://github.com/fennectales/utils/blob/main/CONTRIBUTING.md"
-            registerName="projectInfo.contribute"
-          />
+          <GroupField registerName="projectInfo.contribute" label="Add new Contributor" btnLabel="Add contributor" displayType="badge" obj={{ link: contributeText, badge: `https://img.shields.io/badge/👋-How%20to%20contribute-blue.svg?style=for-the-badge`, label: 'Contribute' }}>
+            <Text
+              label="Contribute"
+              onChange={e => setContributeText(e.target.value)}
+              value={contributeText}
+              placeholder="https://github.com/fennectales/utils/blob/main/CONTRIBUTING.md"
+            />
+          </GroupField>
         </Tabs.Content>
 
         <Tabs.Content value="textarea">

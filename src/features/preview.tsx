@@ -3,13 +3,15 @@
 // https://dev.to/acidop/i-built-an-markdown-editor-using-nextjs-and-tailwindcss-46bg
 
 import { getMarkdownCode } from '@/util/getMarkdownCode'
+import { getContributors } from '@/util/getReadme/getContributors'
+import { getProjectInfo } from '@/util/getReadme/getProjectInfo'
 import { useFormContext } from 'react-hook-form'
 
 export function Preview() {
   const { watch } = useFormContext()
   const formsFields = watch()
 
-  const markdownCode = getMarkdownCode(formsFields)
+  const markdownCode = getProjectInfo(formsFields)
 
   return (
     <div className="relative w-full">

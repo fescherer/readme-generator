@@ -12,9 +12,10 @@ type GroupFieldProps = {
   obj: any
   btnLabel: string
   registerName: string
+  btnDisabled?: boolean
 }
 
-export function GroupField({ label, children, displayType, obj, btnLabel, registerName }: PropsWithChildren<GroupFieldProps>) {
+export function GroupField({ label, children, displayType, obj, btnLabel, registerName, btnDisabled = false }: PropsWithChildren<GroupFieldProps>) {
   const { control } = useFormContext()
   const { fields, append, remove } = useFieldArray({
     control,
@@ -37,7 +38,7 @@ export function GroupField({ label, children, displayType, obj, btnLabel, regist
       <div className="border-l-2 border-form-highlight/20 pl-2">
         {children}
 
-        <button type="button" className="button-fill w-full whitespace-nowrap text-sm" onClick={addBadge}>
+        <button disabled={btnDisabled} type="button" className="button-fill w-full whitespace-nowrap text-sm" onClick={addBadge}>
           {btnLabel}
         </button>
       </div>

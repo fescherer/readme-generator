@@ -45,29 +45,9 @@ export function getMarkdownCode(form: FieldValues) {
   </p>`}
   </div>
 
-  <!-- **********************🐲About🐲********************** -->
 
-  <a name="about"></a>
 
-  ## 📕 About 📕
 
-  ${form?.aboutProject?.description}
-
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-  <!-- **********************🐲Built With🐲********************** -->
-
-  <a name="stack"></a>
-
-  ## 💻 Built With 💻
-
-  <div align="center">
-
-  ${form?.buildWith?.technologies?.map((item: TBadge) => `[![${item?.label}][${item?.badge}]][${item?.link}]`)}
-
-  </div>
-
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
   <!-- **********************🐲Getting Started🐲********************** -->
 

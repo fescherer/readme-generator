@@ -16,57 +16,68 @@ import { FormProvider, useForm } from 'react-hook-form'
 
 const items = [
   {
+    value: 'basic-information',
     title: 'Basic Information',
     description: 'Fill the obrigatory fields',
     children: <BasicInformation />,
   },
   {
+    value: 'sumamry',
     title: 'Sumamry',
     description: 'Sumamry',
     children: <Summary />,
   },
   {
+    value: 'about-project',
     title: 'About Project',
     description: 'Give a nice description',
     children: <AboutProject />,
   },
   {
+    value: 'build-with',
     title: 'Build with',
     description: 'Technologies used',
     children: <BuildWith />,
   },
   {
+    value: 'contact-us',
     title: 'Contact Us',
     description: 'Find us in our socials',
     children: <ContactUs />,
   },
   {
+    value: 'contributors',
     title: 'Contributors',
     description: 'People who create the project',
     children: <Contributors />,
   },
   {
+    value: 'faq',
     title: 'FAQ',
     description: 'Questions and answers about your project',
     children: <FAQ />,
   },
   {
+    value: 'gifs-prints',
     title: 'Gifs/Prints',
     description: 'Gifs/Prints of your project',
     children: <GifsPrints />,
   },
   {
+    value: 'how-to-use',
     title: 'How to use',
     description:
       'To get this project up and running locally on your pc, follow the steps:',
     children: <HowToUse />,
   },
   {
+    value: 'project-info',
     title: 'Project Info',
     description: 'Some project info',
     children: <ProjectInfo />,
   },
   {
+    value: 'special-thanks',
     title: 'Special Thanks',
     description: 'Give credits for who help you',
     children: <SpecialThanks />,
