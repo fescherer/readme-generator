@@ -9,7 +9,7 @@ export function getProjectInfo(form: FieldValues) {
 
 <a name="projectInfo"></a>
 
-## 💬 Project Info 💬
+## ℹ️ Project Info
 
 <div align="center">
 

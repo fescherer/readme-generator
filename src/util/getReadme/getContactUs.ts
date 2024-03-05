@@ -9,7 +9,7 @@ export function getContactUs(form: FieldValues) {
 <!-- **********************🐲 Contact Us 🐲********************** -->
 <a name="contactUs"></a>
 
-## 💬 Contact Us 💬
+## 💬 Contact Us
 
 Share your ideas with us 😁 Find us in our socials below:
 

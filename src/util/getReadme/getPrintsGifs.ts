@@ -6,6 +6,8 @@ export function getGifsPrints(form: FieldValues) {
   return `
 <!-- **********************🐲Gifs Prints🐲********************** -->
 
+## 🏞️ Gifs Prints
+
 <a name="gifsprints"></a>
 `
 }

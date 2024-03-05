@@ -1,5 +1,7 @@
 import { FieldValues } from 'react-hook-form'
 
+// TODO add emoji picker to be an main emoji
+
 export function getAboutProject(form: FieldValues) {
   const field = form?.aboutProject
   if (!field || field?.isHide || !field?.description) return ``
@@ -9,7 +11,7 @@ export function getAboutProject(form: FieldValues) {
 
 <a name="aboutProject"></a>
 
-## 📕 About 📕
+## 📕 About
 
 ${field?.description}
 

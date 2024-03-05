@@ -10,7 +10,7 @@ export function getBuildWith(form: FieldValues) {
 
 <a name="buildWith"></a>
 
-## 💻 Built With 💻
+## 💻 Built With
 
 <div align="center">
 

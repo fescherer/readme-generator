@@ -11,7 +11,7 @@ export function getFAQ(form: FieldValues) {
 
 <a name="faq"></a>
 
-## 💬 FAQ
+## ❔ FAQ
 
 ${field.faq.map((item: TFAQ) => `
 > ### ${item.question}
