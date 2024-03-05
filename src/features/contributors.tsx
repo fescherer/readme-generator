@@ -13,7 +13,7 @@ export function Contributors() {
     <div>
       <Switch registerName="contributors.isHide" label="Hide Contributors" />
 
-      <GroupField registerName="contributors.contributors" label="Add new Contributor" btnLabel="Add contributor" displayType="image" obj={{ link: `https://github.com/${githubProfile}`, badge: `https://github.com/${githubProfile}.png`, label: name }}>
+      <GroupField registerName="contributors.contributors" label="Add new Contributor" btnLabel="Add contributor" displayType="image" obj={{ link: `https://github.com/${githubProfile}`, badge: `https://github.com/${githubProfile}.png`, label: name, value: `https://github.com/${githubProfile}` }}>
         <Text
           label="Github username"
           onChange={e => setGithubProfile(e.target.value)}

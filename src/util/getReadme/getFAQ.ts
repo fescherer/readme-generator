@@ -3,21 +3,21 @@ import { FieldValues } from 'react-hook-form'
 
 export function getFAQ(form: FieldValues) {
   const field = form?.faq
-  if (field?.isHide) return ``
+  if (!field || field?.isHide || !field?.faq) return ``
   else
     return `
-    <!-- **********************🐲FAQ🐲********************** -->
+<!-- **********************🐲FAQ🐲********************** -->
 
-    <a name="contact"></a>
+<a name="contact"></a>
 
-    ## 💬 FAQ 💬
+## 💬 FAQ 💬
 
-    ${field.faq.map((item: TFAQ) => `
-    ### ${item.question}
+${field.faq.map((item: TFAQ) => `
+### ${item.question}
 
-    ${item.answer}
-    `)}
+${item.answer}
+`)}
 
-    <p align="right">(<a href="#readme-top">back to top</a>)</p>
-  `
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+`
 }

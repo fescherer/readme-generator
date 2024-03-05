@@ -3,30 +3,26 @@ import { FieldValues } from 'react-hook-form'
 
 export function getSpecialThanks(form: FieldValues) {
   const field = form?.specialThanks
-  if (field?.isHide) return ``
+  if (!field || field?.isHide || !field?.specialThanks?.length) return ``
   else
     return `
-  <!-- **********************🐲SpecialThanks🐲********************** -->
+<!-- **********************🐲SpecialThanks🐲********************** -->
 
-  <a name="SpecialThanks"></a>
+<a name="SpecialThanks"></a>
 
-  ## 🤗 SpecialThanks 🤗
+## 🤗 SpecialThanks 🤗
 
-  <table>
-    <tr>
-      ${field?.specialThanks?.map((contributor: TBadge) =>
-        `
-        <td align="center">
-          <a href=${contributor.link}>
-            <img src=${contributor.badge} width="100px;" alt="${contributor.label} Picture"/><br>
-            <sub>
-              <b>${contributor.label}</b>
-            </sub>
-          </a>
-        </td>
-        `
-      )}
-    </tr>
-  </table>
-  `
+<table>
+  <tr>
+    ${field?.specialThanks?.map((contributor: TBadge) => `<td align="center">
+      <a href=${contributor.link}>
+        <img src=${contributor.badge} width="100px;" alt="${contributor.label} Picture"/><br>
+        <sub>
+          <b>${contributor.label}</b>
+        </sub>
+      </a>
+    </td>`)}
+  </tr>
+</table>
+`
 }

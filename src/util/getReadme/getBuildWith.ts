@@ -3,21 +3,21 @@ import { FieldValues } from 'react-hook-form'
 
 export function getBuildWith(form: FieldValues) {
   const field = form?.buildWith
-  if (field?.isHide) return ``
+  if (!field || field?.isHide || !field?.technologies) return ``
   else
     return `
-  <!-- **********************🐲Built With🐲********************** -->
+<!-- **********************🐲Built With🐲********************** -->
 
-  <a name="stack"></a>
+<a name="stack"></a>
 
-  ## 💻 Built With 💻
+## 💻 Built With 💻
 
-  <div align="center">
+<div align="center">
 
-  ${field?.technologies?.map((item: TBadge) => `[![${item?.label}][${item?.badge}]][${item?.link}]`)}
+${field?.technologies?.map((item: TBadge) => `[![${item?.label}][${item?.badge}]][${item?.link}]`)}
 
-  </div>
+</div>
 
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>
-  `
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+`
 }

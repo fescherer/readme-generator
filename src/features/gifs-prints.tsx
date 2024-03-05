@@ -11,7 +11,7 @@ export function GifsPrints() {
     <div>
       <Switch registerName="gifPrint.isHide" label="Hide Gif Print" />
 
-      <GroupField registerName="gifPrint.gifsprints" label="Add new Gif/Print" btnLabel="Add Gif/Print" displayType="image" obj={{ badge: url, alt }}>
+      <GroupField registerName="gifPrint.gifsprints" label="Add new Gif/Print" btnLabel="Add Gif/Print" displayType="image" obj={{ badge: url, alt, value: url }}>
         <Text
           label="Url Gif Print"
           onChange={e => setURL(e.target.value)}

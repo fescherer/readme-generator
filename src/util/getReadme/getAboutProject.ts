@@ -2,17 +2,17 @@ import { FieldValues } from 'react-hook-form'
 
 export function getAboutProject(form: FieldValues) {
   const field = form?.aboutProject
-  if (field?.isHide) return ``
+  if (!field || field?.isHide || !field?.description) return ``
   else
     return `
-  <!-- **********************🐲About🐲********************** -->
+<!-- **********************🐲About🐲********************** -->
 
-  <a name="about"></a>
+<a name="about"></a>
 
-  ## 📕 About 📕
+## 📕 About 📕
 
-  ${field?.description}
+${field?.description}
 
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>
-  `
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+`
 }

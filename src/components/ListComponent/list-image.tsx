@@ -23,7 +23,7 @@ export function ListImage({ fields, onClick }: ListImageProps) {
                     src={item.badge}
                     width={70}
                     height={70}
-                    alt={item.alt}
+                    alt={item.alt || item.label || ''}
                     unoptimized
                   />
                 </Link>
@@ -34,7 +34,7 @@ export function ListImage({ fields, onClick }: ListImageProps) {
                   src={item.badge}
                   width={70}
                   height={70}
-                  alt={item.alt}
+                  alt={item.alt || item.label || ''}
                   unoptimized
                 />
                 )
