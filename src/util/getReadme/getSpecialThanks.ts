@@ -21,7 +21,8 @@ export function getSpecialThanks(form: FieldValues) {
           <b>${contributor.label}</b>
         </sub>
       </a>
-    </td>`)}
+    </td>
+    `).join('')}
   </tr>
 </table>
 `

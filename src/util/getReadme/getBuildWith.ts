@@ -14,7 +14,7 @@ export function getBuildWith(form: FieldValues) {
 
 <div align="center">
 
-${field?.technologies?.map((item: TBadge) => `[![${item?.label}][${item?.badge}]][${item?.link}]`)}
+${field?.technologies?.map((item: TBadge) => `[![${item?.label}][${item?.badge}]][${item?.link}]`).join('')}
 
 </div>
 

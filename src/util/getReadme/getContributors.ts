@@ -25,7 +25,7 @@ export function getContributors(form: FieldValues) {
         </a>
       </td>
       `
-    )}
+    ).join('')}
   </tr>
 </table>
 `
