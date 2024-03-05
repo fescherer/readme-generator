@@ -7,7 +7,7 @@ export function getAboutProject(form: FieldValues) {
     return `
 <!-- **********************🐲About🐲********************** -->
 
-<a name="about"></a>
+<a name="aboutProject"></a>
 
 ## 📕 About 📕
 

@@ -8,7 +8,7 @@ export function getSpecialThanks(form: FieldValues) {
     return `
 <!-- **********************🐲SpecialThanks🐲********************** -->
 
-<a name="SpecialThanks"></a>
+<a name="specialThanks"></a>
 
 ## 🤗 SpecialThanks 🤗
 

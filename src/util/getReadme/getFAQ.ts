@@ -9,7 +9,7 @@ export function getFAQ(form: FieldValues) {
     return `
 <!-- **********************🐲FAQ🐲********************** -->
 
-<a name="contact"></a>
+<a name="faq"></a>
 
 ## 💬 FAQ 💬
 

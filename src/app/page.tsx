@@ -40,6 +40,31 @@ const items = [
     children: <BuildWith />,
   },
   {
+    value: 'how-to-use',
+    title: 'How to use',
+    description:
+      'To get this project up and running locally on your pc, follow the steps:',
+    children: <HowToUse />,
+  },
+  {
+    value: 'gifs-prints',
+    title: 'Gifs/Prints',
+    description: 'Gifs/Prints of your project',
+    children: <GifsPrints />,
+  },
+  {
+    value: 'faq',
+    title: 'FAQ',
+    description: 'Questions and answers about your project',
+    children: <FAQ />,
+  },
+  {
+    value: 'project-info',
+    title: 'Project Info',
+    description: 'Some project info',
+    children: <ProjectInfo />,
+  },
+  {
     value: 'contact-us',
     title: 'Contact Us',
     description: 'Find us in our socials',
@@ -50,31 +75,6 @@ const items = [
     title: 'Contributors',
     description: 'People who create the project',
     children: <Contributors />,
-  },
-  {
-    value: 'faq',
-    title: 'FAQ',
-    description: 'Questions and answers about your project',
-    children: <FAQ />,
-  },
-  {
-    value: 'gifs-prints',
-    title: 'Gifs/Prints',
-    description: 'Gifs/Prints of your project',
-    children: <GifsPrints />,
-  },
-  {
-    value: 'how-to-use',
-    title: 'How to use',
-    description:
-      'To get this project up and running locally on your pc, follow the steps:',
-    children: <HowToUse />,
-  },
-  {
-    value: 'project-info',
-    title: 'Project Info',
-    description: 'Some project info',
-    children: <ProjectInfo />,
   },
   {
     value: 'special-thanks',

@@ -4,6 +4,7 @@ import { getAboutProject, getBasicInformation, getBuildWith, getContactUs, getCo
 export function getMarkdownCode(form: FieldValues) {
   const string
     = getBasicInformation(form)
+    + getSummary(form)
     + getAboutProject(form)
     + getBuildWith(form)
     + getContactUs(form)
@@ -13,7 +14,6 @@ export function getMarkdownCode(form: FieldValues) {
     + getGifsPrints(form)
     + getProjectInfo(form)
     + getSpecialThanks(form)
-    + getSummary(form)
 
   return string
 }

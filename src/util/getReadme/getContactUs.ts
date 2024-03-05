@@ -7,7 +7,7 @@ export function getContactUs(form: FieldValues) {
   else
     return `
 <!-- **********************🐲Contact Me🐲********************** -->
-<a name="contact"></a>
+<a name="contactUs"></a>
 
 ## 💬 Contact me 💬
 

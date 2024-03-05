@@ -7,12 +7,16 @@ export function getProjectInfo(form: FieldValues) {
     return `
 <!-- **********************🐲 PROJECT INFO 🐲********************** -->
 
-<a name="contact"></a>
+<a name="projectInfo"></a>
 
 ## 💬 Project Info 💬
 
-${field?.license?.length > 0 ? `[![${field?.license?.[0]?.label}][${field?.license?.[0]?.badge}]][${field?.license?.[0]?.link}]` : ''}
-${field?.contribute?.length > 0 ? `[![${field?.contribute?.[0]?.label}][${field?.contribute?.[0]?.badge}]][${field?.contribute?.[0]?.link}]` : ''}
+<div align="center">
+
+${field?.license?.length > 0 ? `[![${field?.license?.[0]?.label}][license-shield]][license-url]` : ''}
+${field?.contribute?.length > 0 ? `[![${field?.contribute?.[0]?.label}][info-contribute-url]][info-issues-shield]` : ''}
+
+</div>
 
 ${field?.descriptionLicense
 ? `
@@ -26,11 +30,19 @@ ${field?.descriptionContribute
 ? `
 ### How to contribute
 
+[![Create an issue][info-issues-shield]][info-issues-url]
+
 ${field?.descriptionContribute}
 `
 : ''}
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Badges -->
+[license-shield]: ${field?.license?.[0]?.badge}
+[license-url]: ${field?.license?.[0]?.link}
+[info-contribute-url]: ${field?.contribute?.[0]?.badge}
+[info-issues-shield]: ${field?.contribute?.[0]?.link}
 `
 }
 
