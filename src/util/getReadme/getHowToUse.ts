@@ -6,6 +6,8 @@ export function getHowToUse(form: FieldValues) {
   return `
 <!-- **********************🐲How to use🐲********************** -->
 
+## 🚀 How to use
+
 <a name="howToUse"></a>
 `
 }

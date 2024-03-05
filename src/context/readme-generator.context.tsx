@@ -11,7 +11,7 @@ type IReadmeGenerator = {
     shortDescription: string
     projectImage: string
   }
-  summary: {
+  tableOfContents: {
     isEnabled: boolean
   }
 }
@@ -24,7 +24,7 @@ const defaultValue: IReadmeGenerator = {
     shortDescription: '',
     projectImage: '',
   },
-  summary: {
+  tableOfContents: {
     isEnabled: true,
   },
 }

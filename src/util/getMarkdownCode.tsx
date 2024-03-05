@@ -1,18 +1,18 @@
 import { FieldValues } from 'react-hook-form'
-import { getAboutProject, getBasicInformation, getBuildWith, getContactUs, getContributors, getFAQ, getGifsPrints, getHowToUse, getProjectInfo, getSpecialThanks, getSummary } from './getReadme'
+import { getAboutProject, getBasicInformation, getBuildWith, getContactUs, getContributors, getFAQ, getGifsPrints, getHowToUse, getProjectInfo, getSpecialThanks, getTableOfContents } from './getReadme'
 
 export function getMarkdownCode(form: FieldValues) {
   const string
     = getBasicInformation(form)
-    + getSummary(form)
+    + getTableOfContents(form)
     + getAboutProject(form)
     + getBuildWith(form)
-    + getContactUs(form)
-    + getContributors(form)
-    + getFAQ(form)
     + getHowToUse(form)
     + getGifsPrints(form)
+    + getFAQ(form)
     + getProjectInfo(form)
+    + getContactUs(form)
+    + getContributors(form)
     + getSpecialThanks(form)
 
   return string

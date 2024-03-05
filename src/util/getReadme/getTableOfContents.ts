@@ -1,10 +1,10 @@
 import { FieldValues } from 'react-hook-form'
 
-export function getSummary(form: FieldValues) {
+export function getTableOfContents(form: FieldValues) {
   const field = form.summary
   if (!field || field?.isHide) return ``
   return `
-<!-- **********************🐲 Summary 🐲********************** -->
+<!-- **********************🐲 Table of contents 🐲********************** -->
 <div align="center">
 <br />
 <a href="https://github.com/${form.basicInformation.repo || 'fescherer/blog'}"><strong>Explore the docs »</strong></a>

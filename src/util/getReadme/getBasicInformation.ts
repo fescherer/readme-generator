@@ -6,7 +6,7 @@ export function getBasicInformation(form: FieldValues) {
     repo: 'fescherer/blog',
     projectImage: 'https://github.com/fescherer/pokedex/assets/62115215/74001705-7939-4769-a5a0-0e5a77cb6334',
     projectName: 'Markdown Readme Generator',
-    shortDescription: '',
+    shortDescription: 'Here goes a short description of your project. Basically what it does.',
   }
   if (!field || field?.isHide) return ``
   return `

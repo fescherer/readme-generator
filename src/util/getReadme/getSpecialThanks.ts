@@ -10,7 +10,7 @@ export function getSpecialThanks(form: FieldValues) {
 
 <a name="specialThanks"></a>
 
-## 🤗 SpecialThanks 🤗
+## 🤗 SpecialThanks
 
 <table>
   <tr>

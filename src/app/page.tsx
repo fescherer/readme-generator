@@ -11,7 +11,7 @@ import { HowToUse } from '@/features/how-to-use'
 import { Preview } from '@/features/preview'
 import { ProjectInfo } from '@/features/project-info'
 import { SpecialThanks } from '@/features/special-thanks'
-import { Summary } from '@/features/summary'
+import { TableOfContents } from '@/features/table-of-contents'
 import { FormProvider, useForm } from 'react-hook-form'
 
 const items = [
@@ -25,7 +25,7 @@ const items = [
     value: 'sumamry',
     title: 'Sumamry',
     description: 'Sumamry',
-    children: <Summary />,
+    children: <TableOfContents />,
   },
   {
     value: 'about-project',

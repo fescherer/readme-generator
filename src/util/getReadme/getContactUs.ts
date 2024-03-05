@@ -3,13 +3,13 @@ import { FieldValues } from 'react-hook-form'
 
 export function getContactUs(form: FieldValues) {
   const field = form?.contactUs
-  if (!field || field?.isHide || !field?.contactUs) return ``
+  if (!field || field?.isHide || !field?.contactUs.length) return ``
   else
     return `
-<!-- **********************🐲Contact Me🐲********************** -->
+<!-- **********************🐲 Contact Us 🐲********************** -->
 <a name="contactUs"></a>
 
-## 💬 Contact me 💬
+## 💬 Contact Us 💬
 
 Share your ideas with us 😁 Find us in our socials below:
 
