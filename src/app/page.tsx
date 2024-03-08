@@ -1,4 +1,5 @@
 'use client'
+import { BuildWithHelp } from '@/components/HelpPopover/build-with-help'
 import { SectionCard } from '@/components/section-card'
 import { AboutProject } from '@/features/about-project'
 import { BasicInformation } from '@/features/basic-information'
@@ -38,6 +39,7 @@ const items = [
     title: 'Build with',
     description: 'Technologies used',
     children: <BuildWith />,
+    helpPopover: <BuildWithHelp />,
   },
   {
     value: 'how-to-use',
@@ -99,6 +101,7 @@ export default function Home() {
                 key={item.title}
                 description={item.description}
                 title={item.title}
+                helpPopover={item?.helpPopover}
               >
                 {item.children}
               </SectionCard>
