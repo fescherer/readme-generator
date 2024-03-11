@@ -4,11 +4,10 @@ import { FieldValues } from 'react-hook-form'
 export function getFAQ(form: FieldValues) {
   const field = form?.faq
   console.log(field)
-  if (!field || field?.isHide || !field?.faq?.length) return ``
+  if (!field || !field?.enabled || !field?.faq?.length) return ``
   else
-    return `
+    return `\n
 <!-- **********************🐲FAQ🐲********************** -->
-
 <a name="faq"></a>
 
 ## ❔ FAQ
@@ -18,6 +17,5 @@ ${field.faq.map((item: TFAQ) => `
 >
 > ${item.answer}
 `).join('')}
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>`
 }

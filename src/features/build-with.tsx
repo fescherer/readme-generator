@@ -15,14 +15,14 @@ export function BuildWith() {
 
   return (
     <div className="flex flex-col gap-2">
-      <Switch registerName="buildWith.isHide" label="Hide Build With" />
+      <Switch defaultChecked registerName="buildWith.enabled" label="Enable Build With" />
       <MultiSelectBadge items={TECHNOLOGIES} registerName="buildWith.technologies" triggerLabel="Add tecnology" />
 
       <GroupField
-        registerName="buildWith.buildWith"
+        registerName="buildWith.customTechnologies"
         label="Add new technology"
         displayType="badge"
-        obj={{ label: alt, link, badge }}
+        obj={{ label: alt, value: alt, link, badge }}
         btnLabel="Add technology"
       >
         <Text label="Alt Name" value={alt} onChange={e => setAlt(e.target.value)} placeholder="React logo" />

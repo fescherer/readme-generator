@@ -9,7 +9,7 @@ export function SpecialThanks() {
 
   return (
     <div>
-      <Switch registerName="specialThanks.isHide" label="Hide Special Thanks" />
+      <Switch defaultChecked registerName="specialThanks.enabled" label="Enable Special Thanks" />
 
       <GroupField
         label="Add new special thanks"

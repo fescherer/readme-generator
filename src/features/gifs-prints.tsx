@@ -9,7 +9,7 @@ export function GifsPrints() {
 
   return (
     <div>
-      <Switch registerName="gifPrint.isHide" label="Hide Gif Print" />
+      <Switch defaultChecked registerName="gifPrint.enabled" label="Enable Gif Print" />
 
       <GroupField registerName="gifPrint.gifsprints" label="Add new Gif/Print" btnLabel="Add Gif/Print" displayType="image" obj={{ badge: url, alt, value: url }}>
         <Text

@@ -19,7 +19,7 @@ export function ContactUs() {
 
   return (
     <div>
-      <Switch registerName="contactUs.isHide" label="Hide Contact Us" />
+      <Switch defaultChecked registerName="contactUs.enabled" label="Enable Contact Us" />
 
       <GroupField registerName="contactUs.contactUs" label="Add new contact" btnLabel="Add contact" displayType="badge" obj={{ ...social, link: url }}>
         <Select changeValue={handleSocial} fields={SOCIALTECH} value={social} />

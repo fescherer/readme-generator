@@ -2,12 +2,10 @@ import { FieldValues } from 'react-hook-form'
 
 export function getGifsPrints(form: FieldValues) {
   const field = form.gifsPrints
-  if (!field || field?.isHide || !field?.faq) return ``
-  return `
+  if (!field || !field?.enabled || !field?.printGifs) return ``
+  return `\n
 <!-- **********************🐲Gifs Prints🐲********************** -->
-
 ## 🏞️ Gifs Prints
 
-<a name="gifsprints"></a>
-`
+<a name="gifsprints"></a>`
 }

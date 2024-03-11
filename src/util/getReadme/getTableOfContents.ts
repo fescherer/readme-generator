@@ -1,19 +1,15 @@
 import { FieldValues } from 'react-hook-form'
 
 export function getTableOfContents(form: FieldValues) {
-  const field = form.summary
-  if (!field || field?.isHide) return ``
-  return `
+  const field = form.tableOfContent
+  if (!field || !field?.enabled) return ``
+  return `\n
 <!-- **********************🐲 Table of contents 🐲********************** -->
 <div align="center">
-<br />
 <a href="https://github.com/${form.basicInformation.repo || 'fescherer/blog'}"><strong>Explore the docs »</strong></a>
-<br />
-<br />
+
 ${[
-form?.aboutProject?.description
-? `<a href="#aboutProject">About</a>`
-: '',
+`<a href="#aboutProject">About</a>`,
 form?.buildWith?.technologies?.length
 ? `<a href="#buildWith">Build With</a>`
 : '',
@@ -39,6 +35,5 @@ form?.specialThanks?.specialThanks?.length
 ? `<a href="#specialThanks">Special Thanks</a>`
 : '',
 ].filter(n => n).join('\n•\n')}
-</div>
-`
+</div>`
 }

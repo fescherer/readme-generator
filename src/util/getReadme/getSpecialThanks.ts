@@ -3,9 +3,9 @@ import { FieldValues } from 'react-hook-form'
 
 export function getSpecialThanks(form: FieldValues) {
   const field = form?.specialThanks
-  if (!field || field?.isHide || !field?.specialThanks?.length) return ``
+  if (!field || !field?.enabled || !field?.specialThanks?.length) return ``
   else
-    return `
+    return `\n
 <!-- **********************🐲SpecialThanks🐲********************** -->
 
 <a name="specialThanks"></a>
@@ -24,6 +24,5 @@ export function getSpecialThanks(form: FieldValues) {
     </td>
     `).join('')}
   </tr>
-</table>
-`
+</table>`
 }

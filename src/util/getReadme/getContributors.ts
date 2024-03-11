@@ -3,11 +3,10 @@ import { FieldValues } from 'react-hook-form'
 
 export function getContributors(form: FieldValues) {
   const field = form?.contributors
-  if (!field || field?.isHide || !field?.contributors.length) return ``
+  if (!field || !field?.enabled || !field?.contributors.length) return ``
   else
-    return `
+    return `\n
 <!-- **********************🐲Contributors🐲********************** -->
-
 <a name="contributors"></a>
 
 ## 🤗 Contributors
@@ -27,6 +26,5 @@ export function getContributors(form: FieldValues) {
       `
     ).join('')}
   </tr>
-</table>
-`
+</table>`
 }

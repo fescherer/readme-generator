@@ -9,7 +9,7 @@ export function FAQ() {
 
   return (
     <div>
-      <Switch registerName="faq.isHide" label="Hide FAQ" />
+      <Switch defaultChecked registerName="faq.enabled" label="Enable FAQ" />
 
       <GroupField registerName="faq.faq" label="Add new FAQ" displayType="text" obj={{ question, answer }} btnLabel="Add FAQ">
         <Text

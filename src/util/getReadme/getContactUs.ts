@@ -3,9 +3,9 @@ import { FieldValues } from 'react-hook-form'
 
 export function getContactUs(form: FieldValues) {
   const field = form?.contactUs
-  if (!field || field?.isHide || !field?.contactUs.length) return ``
+  if (!field || !field?.enabled || !field?.contactUs.length) return ``
   else
-    return `
+    return `\n
 <!-- **********************🐲 Contact Us 🐲********************** -->
 <a name="contactUs"></a>
 
@@ -15,6 +15,5 @@ Share your ideas with us 😁 Find us in our socials below:
 
 ${field?.contactUs?.map((item: TBadge) => `[![${item?.label}][${item?.badge}]][${item?.link}]`).join('')}
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>`
 }

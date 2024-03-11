@@ -11,7 +11,7 @@ export function Contributors() {
 
   return (
     <div>
-      <Switch registerName="contributors.isHide" label="Hide Contributors" />
+      <Switch defaultChecked registerName="contributors.enabled" label="Enable Contributors" />
 
       <GroupField registerName="contributors.contributors" label="Add new Contributor" btnLabel="Add contributor" displayType="image" obj={{ link: `https://github.com/${githubProfile}`, badge: `https://github.com/${githubProfile}.png`, label: name, value: `https://github.com/${githubProfile}` }}>
         <Text
