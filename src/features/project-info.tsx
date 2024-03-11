@@ -26,7 +26,7 @@ export function ProjectInfo() {
 [license-url]: https://github.com/${field.repo || defaultValues.repo}/blob/master/LICENSE */}
               <GroupField registerName="projectInfo.license" label="Project License" btnLabel="Update License" displayType="badge" obj={{ link: `https://github.com/${repo}/blob/master/LICENSE`, badge: `https://img.shields.io/github/license/${repo}.svg?style=for-the-badge`, label: 'LICENSE' }} btnDisabled={!repo} />
 
-              <GroupField registerName="projectInfo.contribute" label="Add new Contributor" btnLabel="Add contributor" displayType="badge" obj={{ link: contributeText, badge: `https://img.shields.io/badge/👋-How%20to%20contribute-blue.svg?style=for-the-badge`, label: 'Contribute' }}>
+              <GroupField registerName="projectInfo.contribute" label="Add how to contribute" btnLabel="Add contributor" displayType="badge" obj={{ link: contributeText, badge: `https://img.shields.io/badge/👋-How%20to%20contribute-blue.svg?style=for-the-badge`, label: 'Contribute' }}>
                 <Text
                   label="Contribute"
                   onChange={e => setContributeText(e.target.value)}
