@@ -1,4 +1,4 @@
-import { TFAQ } from '@/@types/faq'
+import { TBadgeText } from '@/@types/badge-text'
 import { FieldValues } from 'react-hook-form'
 
 export function getFAQ(form: FieldValues) {
@@ -12,10 +12,10 @@ export function getFAQ(form: FieldValues) {
 
 ## ❔ FAQ
 
-${field.faq.map((item: TFAQ) => `
-> ### ${item.question}
+${field.faq.map((item: TBadgeText) => `
+> ### ${item.title}
 >
-> ${item.answer}
+> ${item.text}
 `).join('')}
 <p align="right">(<a href="#readme-top">back to top</a>)</p>`
 }

@@ -26,9 +26,9 @@ export function HowToUse() {
 
   return (
     <div>
-      <Switch defaultChecked registerName="howToUse.enabled" label="Enable How to use" />
+      <Switch registerName="howToUse.enabled" label="Enable How to use" />
 
-      <GroupField registerName={registerName} label="Add new how to use step" btnLabel="Add How to use Step" displayType="title" obj={{ title, text, id: Math.random().toString() }}>
+      <GroupField registerName={registerName} label="Add new how to use step" btnLabel="Add How to use Step" displayType="text" obj={{ title, text, id: Math.random().toString() }}>
         <Text
           label="Description about the step"
           onChange={e => setTitle(e.target.value)}

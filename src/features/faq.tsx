@@ -4,25 +4,25 @@ import { Text } from '@/components/form-field/text'
 import { useState } from 'react'
 
 export function FAQ() {
-  const [question, setQuestion] = useState('')
-  const [answer, setAnswer] = useState('')
+  const [title, setTitle] = useState('')
+  const [text, setText] = useState('')
 
   return (
     <div>
-      <Switch defaultChecked registerName="faq.enabled" label="Enable FAQ" />
+      <Switch registerName="faq.enabled" label="Enable FAQ" />
 
-      <GroupField registerName="faq.faq" label="Add new FAQ" displayType="text" obj={{ question, answer }} btnLabel="Add FAQ">
+      <GroupField registerName="faq.faq" label="Add new FAQ" displayType="text" obj={{ title, text, id: Math.random().toString() }} btnLabel="Add FAQ">
         <Text
           label="Question"
-          onChange={e => setQuestion(e.target.value)}
-          value={question}
+          onChange={e => setTitle(e.target.value)}
+          value={title}
           placeholder="Which browsers are supported?"
         />
 
         <Text
           label="Answer"
-          onChange={e => setAnswer(e.target.value)}
-          value={answer}
+          onChange={e => setText(e.target.value)}
+          value={text}
           placeholder="Firefox, Chrome and Safari"
         />
       </GroupField>

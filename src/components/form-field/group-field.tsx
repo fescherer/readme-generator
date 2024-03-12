@@ -4,7 +4,6 @@ import { ListText } from '../ListComponent/list-text'
 import { ListBadge } from '../ListComponent/list-badge'
 import { TBadge } from '@/@types/badge'
 import { ListImage } from '../ListComponent/list-image'
-import { ListTitle } from '../ListComponent/list-title'
 
 type GroupFieldProps = {
   label: string | ReactNode
@@ -50,7 +49,7 @@ export function GroupField({ label, children, displayType, obj, btnLabel, regist
             ? <ListImage fields={fields as unknown as TBadge[]} onClick={onRemove} />
             : displayType === 'text'
               ? <ListText fields={fields} remove={remove} />
-              : displayType === 'title' ? <ListTitle fields={fields} remove={remove} /> : <></>
+              : <></>
       }
 
     </div>
