@@ -50,7 +50,7 @@ export function GroupField({ label, children, displayType, obj, btnLabel, regist
             ? <ListImage fields={fields as unknown as TBadge[]} onClick={onRemove} />
             : displayType === 'text'
               ? <ListText fields={fields} remove={remove} />
-              : displayType === 'title' ? <ListTitle fields={fields} remove={onRemove} /> : <></>
+              : displayType === 'title' ? <ListTitle fields={fields} remove={remove} /> : <></>
       }
 
     </div>

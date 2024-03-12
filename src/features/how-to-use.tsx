@@ -13,13 +13,14 @@ export function HowToUse() {
     name: registerName,
   })
 
-  const [howToUseStep, setHowToUseStep] = useState('')
+  const [title, setTitle] = useState('')
+  const [text, setText] = useState('')
 
   useEffect(() => {
     if (fields.length === 0) {
-      append({ label: 'git clone <repo-name>' })
-      append({ label: 'pnpm install' })
-      append({ label: 'pnpm dev' })
+      append({ title: 'Clone repository', text: 'git clone <repo-name>', id: Math.random().toString() })
+      append({ title: 'Install dependencies', text: 'pnpm install', id: Math.random().toString() })
+      append({ title: 'Run project', text: 'pnpm dev', id: Math.random().toString() })
     }
   }, [append, fields.length])
 
@@ -27,12 +28,19 @@ export function HowToUse() {
     <div>
       <Switch defaultChecked registerName="howToUse.enabled" label="Enable How to use" />
 
-      <GroupField registerName={registerName} label="Add new how to use step" btnLabel="Add How to use Step" displayType="title" obj={{ label: howToUseStep }}>
+      <GroupField registerName={registerName} label="Add new how to use step" btnLabel="Add How to use Step" displayType="title" obj={{ title, text, id: Math.random().toString() }}>
         <Text
-          label="How to use Step"
-          onChange={e => setHowToUseStep(e.target.value)}
-          value={howToUseStep}
-          placeholder="pnpm run dev"
+          label="Description about the step"
+          onChange={e => setTitle(e.target.value)}
+          value={title}
+          placeholder="Install dependencies"
+        />
+
+        <Text
+          label="Step's code"
+          onChange={e => setText(e.target.value)}
+          value={text}
+          placeholder="pnpm install"
         />
       </GroupField>
     </div>
