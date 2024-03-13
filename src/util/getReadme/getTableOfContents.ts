@@ -1,6 +1,6 @@
-import { FieldValues } from 'react-hook-form'
+import { TForm } from '@/@types/form'
 
-export function getTableOfContents(form: FieldValues) {
+export function getTableOfContents(form: TForm) {
   const field = form.tableOfContent
   if (!field || !field?.enabled) return ``
   return `\n
@@ -10,28 +10,25 @@ export function getTableOfContents(form: FieldValues) {
 
 ${[
 `<a href="#aboutProject">About</a>`,
-form?.buildWith?.technologies?.length
+form?.buildWith?.items?.length
 ? `<a href="#buildWith">Build With</a>`
 : '',
-form?.howToUse?.length
+form?.howToUse?.items?.length
 ? `<a href="#howToUse">How to use</a>`
 : '',
-form?.gifPrint?.gifsprints?.length
+form?.gifsPrints?.items?.length
 ? `<a href="#gifsPrints">Gifs Prints</a>`
 : '',
-form?.faq?.faq?.length
+form?.faq?.items?.length
 ? `<a href="#faq">FAQ</a>`
 : '',
-form?.projectInfo?.license.length || form?.projectInfo?.contribute.length || form?.projectInfo?.descriptionLicense || form?.projectInfo?.descriptionContribute
-? `<a href="#projectInfo">Project Info</a>`
-: '',
-form?.contactUs.contactUs?.length
+form?.contactUs.items?.length
 ? `<a href="#contactUs">Contact Us</a>`
 : '',
-form?.contributors?.contributors?.length
+form?.contributors?.items?.length
 ? `<a href="#contributors">Contributors</a>`
 : '',
-form?.specialThanks?.specialThanks?.length
+form?.specialThanks?.items?.length
 ? `<a href="#specialThanks">Special Thanks</a>`
 : '',
 ].filter(n => n).join('\n•\n')}

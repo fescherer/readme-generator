@@ -1,15 +1,30 @@
-import { TBadge } from '@/@types/badge'
-import { FieldValues } from 'react-hook-form'
+import { TItemImage } from '@/@types/item'
+import { slugfy } from '../slugfy'
+import { TForm } from '@/@types/form'
 
-export function getBuildWith(form: FieldValues) {
+export function getBuildWith(form: TForm) {
   const field = form?.buildWith
-  if (!field || !field?.enabled || !(field?.technologies?.length || field?.customTechnologies?.length)) return ``
+  if (!field || !field?.enabled || !(field?.items?.length || field?.items?.length)) return ``
 
-  const badgesTechnologies = field?.technologies?.map((item: TBadge) => `[![${item?.label}][${item.value}-shield]][${item.value}-url]`)
-  const badgesCustomTechnologies = field?.customTechnologies?.map((item: TBadge) => `[![${item?.label}][${item.value}-shield]][${item.value}-url]`)
+  const badgesTechnologies = generateBadges(field?.items)
+  const badgesCustomTechnologies = generateBadges(field?.customItems)
 
-  const badgesTechnologiesURL = field?.technologies?.map((item: TBadge) => `[${item.value}-shield]: ${item.badge}\n[${item.value}-url]: ${item.link}`)
-  const badgesCustomTechnologiesURL = field?.customTechnologies?.map((item: TBadge) => `[${item.value}-shield]: ${item.badge}\n[${item.value}-url]: ${item.link}`)
+  const badgesTechnologiesURL = generateURL(field?.items)
+  const badgesCustomTechnologiesURL = generateURL(field?.customItems)
+
+  function generateBadges(arr: TItemImage[]) {
+    return arr?.map((item: TItemImage) => {
+      const slug = slugfy(item.alt)
+      return `[![${item?.alt}][${slug}-shield]][${slug}-url]`
+    })
+  }
+
+  function generateURL(arr: TItemImage[]) {
+    return arr?.map((item: TItemImage) => {
+      const slug = slugfy(item.alt)
+      return `[${slug}-shield]: ${item.image}\n[${slug}-url]: ${item.link}`
+    })
+  }
 
   return `\n
 <!-- **********************🐲Built With🐲********************** -->
@@ -19,7 +34,7 @@ export function getBuildWith(form: FieldValues) {
 
 <div align="center">
 
-${[...badgesCustomTechnologies, ...badgesTechnologies].join('\n')}
+${[...badgesTechnologies, ...badgesCustomTechnologies].join('\n')}
 
 </div>
 

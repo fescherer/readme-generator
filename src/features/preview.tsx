@@ -7,9 +7,10 @@ import { LucideCopy } from 'lucide-react'
 import { getMarkdownCode } from '@/util/getMarkdownCode'
 import { Tab } from '@/components/tab'
 import { ObrigatoryItemErrorScreen } from './obrigatory-item-error-screen'
+import { TForm } from '@/@types/form'
 
 export function Preview() {
-  const { watch } = useFormContext()
+  const { watch } = useFormContext<TForm>()
   const formsFields = watch()
 
   const markdownCode = getMarkdownCode(formsFields)

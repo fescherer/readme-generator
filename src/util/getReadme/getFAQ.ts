@@ -1,10 +1,8 @@
-import { TBadgeText } from '@/@types/badge-text'
-import { FieldValues } from 'react-hook-form'
+import { TForm } from '@/@types/form'
 
-export function getFAQ(form: FieldValues) {
+export function getFAQ(form: TForm) {
   const field = form?.faq
-  console.log(field)
-  if (!field || !field?.enabled || !field?.faq?.length) return ``
+  if (!field || !field?.enabled || !field?.items?.length) return ``
   else
     return `\n
 <!-- **********************🐲FAQ🐲********************** -->
@@ -12,7 +10,7 @@ export function getFAQ(form: FieldValues) {
 
 ## ❔ FAQ
 
-${field.faq.map((item: TBadgeText) => `
+${field.items.map(item => `
 > ### ${item.title}
 >
 > ${item.text}

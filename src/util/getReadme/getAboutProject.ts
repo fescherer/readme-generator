@@ -1,8 +1,8 @@
-import { FieldValues } from 'react-hook-form'
+import { TForm } from '@/@types/form'
 
 // TODO add emoji picker to be an main emoji
 
-export function getAboutProject(form: FieldValues) {
+export function getAboutProject(form: TForm) {
   const field = form?.basicInformation
   if (!field || !field?.description) return ``
   else

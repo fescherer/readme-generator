@@ -11,7 +11,7 @@ export function FAQ() {
     <div>
       <Switch registerName="faq.enabled" label="Enable FAQ" />
 
-      <GroupField registerName="faq.faq" label="Add new FAQ" displayType="text" obj={{ title, text, id: Math.random().toString() }} btnLabel="Add FAQ">
+      <GroupField registerName="faq.items" label="Add new FAQ" displayType="text" obj={{ title, text, keyId: Math.random().toString() }} btnLabel="Add FAQ">
         <Text
           label="Question"
           onChange={e => setTitle(e.target.value)}

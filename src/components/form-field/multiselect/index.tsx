@@ -1,18 +1,18 @@
 'use client'
 
-import { TSelect } from '@/@types/select'
 import { useState } from 'react'
 import * as PopoverPrimitive from '@radix-ui/react-popover'
 import { SelectList } from './selectList'
 import { Drawer } from 'vaul'
 import { ChevronDown } from 'lucide-react'
+import { TItemImage } from '@/@types/item'
 
 type SelectProps = {
-  items: TSelect[]
+  items: TItemImage[]
   triggerLabel: string
-  data: TSelect[]
+  data: TItemImage[]
   // eslint-disable-next-line no-unused-vars
-  setDataAppend: (item: TSelect) => void
+  setDataAppend: (item: TItemImage) => void
 }
 
 export function Multiselect({ items, triggerLabel, data, setDataAppend }: SelectProps) {

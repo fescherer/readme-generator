@@ -1,7 +1,7 @@
-import { FieldValues } from 'react-hook-form'
+import { TForm } from '@/@types/form'
 
 type ObrigatoryItemErrorScreenProps = {
-  form: FieldValues
+  form: TForm
 }
 
 export function ObrigatoryItemErrorScreen({ form }: ObrigatoryItemErrorScreenProps) {

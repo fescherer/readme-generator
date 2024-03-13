@@ -1,4 +1,5 @@
 'use client'
+import { TForm } from '@/@types/form'
 import { BuildWithHelp } from '@/components/HelpPopover/build-with-help'
 import { SectionCard } from '@/components/section-card'
 import { BasicInformation } from '@/features/basic-information'
@@ -10,6 +11,7 @@ import { GifsPrints } from '@/features/gifs-prints'
 import { HowToUse } from '@/features/how-to-use'
 import { Preview } from '@/features/preview'
 import { SpecialThanks } from '@/features/special-thanks'
+import { defaultValues } from '@/util/form-default-values'
 import { FormProvider, useForm } from 'react-hook-form'
 
 const items = [
@@ -66,15 +68,16 @@ const items = [
 ]
 
 export default function Home() {
-  const methods = useForm({ defaultValues: { basicInformation: { repo: '' } } })
+  const methods = useForm<TForm>({ defaultValues })
 
   return (
     <FormProvider {...methods}>
+
       <main className="m-auto flex w-full max-w-5xl flex-col p-4">
         <h1 className="text-3xl font-medium underline">Markdown generator</h1>
 
         <div className="flex flex-col gap-1 md:flex-row">
-          <div className="flex flex-col gap-4 py-4">
+          <div className="flex max-w-[320px] flex-col gap-4 py-4">
             {items.map(item => (
               <SectionCard
                 key={item.title}

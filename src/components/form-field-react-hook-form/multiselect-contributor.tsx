@@ -1,15 +1,16 @@
-import { useFieldArray, useFormContext } from 'react-hook-form'
+import { ArrayPath, useFieldArray, useFormContext } from 'react-hook-form'
 import { Multiselect as PrimitiveSelect } from '../form-field/multiselect'
-import { TSelect } from '@/@types/select'
+import { TForm } from '@/@types/form'
+import { TItemImage } from '@/@types/item'
 
 type SelectProps = {
-  registerName: string
+  registerName: ArrayPath<TForm>
   triggerLabel: string
-  items: TSelect[]
+  items: TItemImage[]
 }
 
 export function MultiSelectContributor({ registerName, triggerLabel, items }: SelectProps) {
-  const { control } = useFormContext()
+  const { control } = useFormContext<TForm>()
   const { fields, append } = useFieldArray({
     control,
     name: registerName,
@@ -23,7 +24,7 @@ export function MultiSelectContributor({ registerName, triggerLabel, items }: Se
     <PrimitiveSelect
       items={items}
       triggerLabel={triggerLabel}
-      data={fields as unknown as TSelect[]}
+      data={fields as TItemImage[]}
       setDataAppend={append}
     />
   )

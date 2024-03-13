@@ -15,8 +15,8 @@ export function SpecialThanks() {
         label="Add new special thanks"
         btnLabel="Add special thanks"
         displayType="image"
-        obj={{ link: `https://github.com/${githubProfile}`, badge: `https://github.com/${githubProfile}.png`, label: name, value: `https://github.com/${githubProfile}` }}
-        registerName="specialThanks.specialThanks"
+        obj={{ link: `https://github.com/${githubProfile}`, image: `https://github.com/${githubProfile}.png`, alt: name, keyId: Math.random().toString() }}
+        registerName="specialThanks.items"
       >
         <Text
           label="Github username"

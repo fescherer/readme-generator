@@ -1,7 +1,7 @@
-import { FieldValues } from 'react-hook-form'
 import { getAboutProject, getBasicInformation, getBuildWith, getContactUs, getContributors, getFAQ, getGifsPrints, getHowToUse, getSpecialThanks, getTableOfContents } from './getReadme'
+import { TForm } from '@/@types/form'
 
-export function getMarkdownCode(form: FieldValues) {
+export function getMarkdownCode(form: TForm) {
   const string
     = getBasicInformation(form)
     + getTableOfContents(form)

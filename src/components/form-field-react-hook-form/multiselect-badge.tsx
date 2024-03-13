@@ -1,25 +1,25 @@
-import { useFieldArray, useFormContext } from 'react-hook-form'
+import { ArrayPath, useFieldArray, useFormContext } from 'react-hook-form'
 import { Multiselect as PrimitiveSelect } from '../form-field/multiselect'
-import { TSelect } from '@/@types/select'
 import { ListBadge } from '../ListComponent/list-badge'
-import { TBadge } from '@/@types/badge'
+import { TItemImage } from '@/@types/item'
+import { TForm } from '@/@types/form'
 
 type SelectProps = {
-  registerName: string
+  registerName: ArrayPath<TForm>
   triggerLabel: string
-  items: TSelect[]
+  items: TItemImage[]
 }
 
 export function MultiSelectBadge({ registerName, triggerLabel, items }: SelectProps) {
-  const { control } = useFormContext()
+  const { control } = useFormContext<TForm>()
   const { fields, append, remove } = useFieldArray({
     control,
     name: registerName,
   })
 
-  function onRemove(item: TBadge) {
+  function onRemove(item: TItemImage) {
     // @ts-ignore
-    remove(fields.findIndex(field => field.value === item.value))
+    remove(fields.findIndex(field => field.keyId === item.keyId))
   }
 
   return (
@@ -27,11 +27,11 @@ export function MultiSelectBadge({ registerName, triggerLabel, items }: SelectPr
       <PrimitiveSelect
         items={items}
         triggerLabel={triggerLabel}
-        data={fields as unknown as TSelect[]}
+        data={fields as TItemImage[]}
         setDataAppend={append}
       />
 
-      <ListBadge fields={fields as unknown as TBadge[]} onClick={onRemove} />
+      <ListBadge fields={fields as TItemImage[]} onClick={onRemove} />
     </>
 
   )

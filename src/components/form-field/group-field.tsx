@@ -1,33 +1,37 @@
 import { PropsWithChildren, ReactNode } from 'react'
-import { useFieldArray, useFormContext } from 'react-hook-form'
+import { ArrayPath, useFieldArray, useFormContext } from 'react-hook-form'
 import { ListText } from '../ListComponent/list-text'
 import { ListBadge } from '../ListComponent/list-badge'
-import { TBadge } from '@/@types/badge'
 import { ListImage } from '../ListComponent/list-image'
+import { TItemImage, TItemText } from '@/@types/item'
+import { TForm } from '@/@types/form'
 
 type GroupFieldProps = {
   label: string | ReactNode
   displayType: 'badge' | 'image' | 'text' | 'title'
-  obj: any
+  obj: TItemImage | TItemText
   btnLabel: string
-  registerName: string
+  registerName: ArrayPath<TForm>
   btnDisabled?: boolean
+  hasLabel?: boolean
 }
 
-export function GroupField({ label, children, displayType, obj, btnLabel, registerName, btnDisabled = false }: PropsWithChildren<GroupFieldProps>) {
-  const { control } = useFormContext()
+export function GroupField({ label, children, displayType, obj, btnLabel, registerName, btnDisabled = false, hasLabel = true }: PropsWithChildren<GroupFieldProps>) {
+  const { control } = useFormContext<TForm>()
   const { fields, append, remove } = useFieldArray({
     control,
     name: registerName,
   })
 
   function addBadge() {
-    append(obj)
+    const randomItem = Math.random().toString()
+    append({ ...obj, keyId: randomItem })
   }
 
-  function onRemove(item: TBadge) {
+  // @ts-ignore
+  function onRemove(item) {
     // @ts-ignore
-    remove(fields.findIndex(field => field.value === item.value))
+    remove(fields.findIndex(field => field.keyId === item.keyId))
   }
 
   return (
@@ -44,9 +48,9 @@ export function GroupField({ label, children, displayType, obj, btnLabel, regist
 
       {
         displayType === 'badge'
-          ? <ListBadge fields={fields as unknown as TBadge[]} onClick={onRemove} />
+          ? <ListBadge fields={fields as TItemImage[]} onClick={onRemove} />
           : displayType === 'image'
-            ? <ListImage fields={fields as unknown as TBadge[]} onClick={onRemove} />
+            ? <ListImage hasLabel={hasLabel} fields={fields as TItemImage[]} onClick={onRemove} />
             : displayType === 'text'
               ? <ListText fields={fields} remove={remove} />
               : <></>

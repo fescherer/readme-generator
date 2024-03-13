@@ -1,15 +1,15 @@
 /* eslint-disable react/no-unknown-property */
-import { TSelect } from '@/@types/select'
+import { TItemImage } from '@/@types/item'
 import { Command } from 'cmdk'
 import { Search } from 'lucide-react'
 import { Dispatch, SetStateAction } from 'react'
 
 type SelectListProps = {
-  items: TSelect[]
+  items: TItemImage[]
   setOpen: Dispatch<SetStateAction<boolean>>
-  selectItems: TSelect[]
+  selectItems: TItemImage[]
   // eslint-disable-next-line no-unused-vars
-  append: (item: TSelect) => void
+  append: (item: TItemImage) => void
 }
 
 export function SelectList({ items, setOpen, selectItems, append }: SelectListProps) {
@@ -30,17 +30,17 @@ export function SelectList({ items, setOpen, selectItems, append }: SelectListPr
           {items.map(status => (
             <Command.Item
               className="relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none aria-selected:bg-highlight/20 aria-selected:text-form-value data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
-              key={status.value}
-              value={status.value}
+              key={status.keyId}
+              value={status.keyId}
               onSelect={(value) => {
-                const item = items.find(item => item.value === value)
-                const isAlreadyAdded = selectItems.find(item => item.value === value)
+                const item = items.find(item => item.keyId === value)
+                const isAlreadyAdded = selectItems.find(item => item.keyId === value)
                 if (item && !isAlreadyAdded) append(item)
                 setOpen(false)
               }}
-              disabled={!!selectItems.find(item => item.value === status.value)}
+              disabled={!!selectItems.find(item => item.keyId === status.keyId)}
             >
-              {status.label}
+              {status.alt}
             </Command.Item>
           ))}
 

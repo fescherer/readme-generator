@@ -1,20 +1,16 @@
-import { Controller, useFormContext } from 'react-hook-form'
+import { Controller, Path, useFormContext } from 'react-hook-form'
 import { Switch as SwitchPrimitive } from '../form-field/switch'
-import { useEffect } from 'react'
+import { TForm } from '@/@types/form'
 
 type SwitchProps = {
-  registerName: string
+  registerName: Path<TForm>
   label: string
   defaultChecked?: boolean
   hint?: string
 }
 
-export function Switch({ registerName, label, defaultChecked, hint }: SwitchProps) {
-  const { control, setValue } = useFormContext()
-
-  useEffect(() => {
-    if (defaultChecked) setValue(registerName, true)
-  }, [defaultChecked, registerName, setValue])
+export function Switch({ registerName, label, hint }: SwitchProps) {
+  const { control } = useFormContext<TForm>()
 
   return (
     <Controller
@@ -23,7 +19,7 @@ export function Switch({ registerName, label, defaultChecked, hint }: SwitchProp
       render={({ field }) => (
         <SwitchPrimitive
           label={label}
-          checked={field.value}
+          checked={!!field.value}
           onCheckedChange={field.onChange}
           hint={hint}
         />

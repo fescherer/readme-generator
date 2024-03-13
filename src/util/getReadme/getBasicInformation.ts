@@ -1,7 +1,8 @@
-import { FieldValues } from 'react-hook-form'
+import { TForm } from '@/@types/form'
 
-export function getBasicInformation(form: FieldValues) {
+export function getBasicInformation(form: TForm) {
   const field = form.basicInformation
+  if (!field) return ``
 
   // Badges
   const starsShield = '\n[![Stargazers][stars-shield]][stars-url]'
@@ -20,7 +21,6 @@ export function getBasicInformation(form: FieldValues) {
   const contributingShieldURL = `\n[contributing-shield]: https://img.shields.io/badge/How%20to%20contribute-%E2%9C%A8-purple.svg?style=for-the-badge\n[contributing-url]: https://github.com/${field.repo}/blob/main/CONTRIBUTING.md`
   const issuesShieldURL = `\n[issues-shield]: https://img.shields.io/github/issues/${field.repo}.svg?style=for-the-badge\n[issues-url]: https://github.com/${field.repo}/issues`
 
-  if (!field || field?.isHide) return ``
   return `
 <a name="readme-top"></a>
 

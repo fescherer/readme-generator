@@ -1,9 +1,8 @@
-import { TBadge } from '@/@types/badge'
-import { FieldValues } from 'react-hook-form'
+import { TForm } from '@/@types/form'
 
-export function getContributors(form: FieldValues) {
+export function getContributors(form: TForm) {
   const field = form?.contributors
-  if (!field || !field?.enabled || !field?.contributors.length) return ``
+  if (!field || !field?.enabled || !field?.items.length) return ``
   else
     return `\n
 <!-- **********************🐲Contributors🐲********************** -->
@@ -13,17 +12,14 @@ export function getContributors(form: FieldValues) {
 
 <table>
   <tr>
-    ${field?.contributors?.map((contributor: TBadge) =>
-      `
-      <td align="center">
+    ${field?.items?.map(contributor => `<td align="center">
         <a href=${contributor.link}>
-          <img src=${contributor.badge} width="100px;" alt="${contributor.label} Picture"/><br>
+          <img src=${contributor.image} width="100px;" alt="${contributor.alt} Picture"/><br>
           <sub>
-            <b>${contributor.label}</b>
+            <b>${contributor.alt}</b>
           </sub>
         </a>
-      </td>
-      `
+      </td>`
     ).join('')}
   </tr>
 </table>`
