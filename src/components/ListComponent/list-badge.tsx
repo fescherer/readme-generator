@@ -15,7 +15,7 @@ export function ListBadge({ fields, onClick }: ListBadgeProps) {
       {fields.map(item => (
         <div key={item.keyId} className="flex items-center rounded-full border p-1 pl-2 text-form-value">
           <Link target="_blank" href={item.link}>
-            <Image className="rounded-full" src={item.image} width={70} height={40} alt={item.alt} unoptimized />
+            <Image className="w-auto rounded-full" src={item.image} width={70} height={40} alt={item.alt} unoptimized />
           </Link>
 
           <button className="p-2 transition-all hover:text-form-hightlight" type="button" onClick={() => onClick(item)}>

@@ -20,7 +20,7 @@ export function ListImage({ fields, onClick, hasLabel }: ListImageProps) {
               ? (
                 <Link target="_blank" href={item.link}>
                   <Image
-                    className="rounded"
+                    className="w-auto rounded"
                     src={item.image}
                     width={70}
                     height={70}
@@ -31,7 +31,7 @@ export function ListImage({ fields, onClick, hasLabel }: ListImageProps) {
                 )
               : (
                 <Image
-                  className="rounded"
+                  className="w-auto rounded"
                   src={item.image}
                   width={70}
                   height={70}
