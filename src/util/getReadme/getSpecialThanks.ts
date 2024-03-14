@@ -6,7 +6,6 @@ export function getSpecialThanks(form: TForm) {
   else
     return `\n
 <!-- **********************🐲SpecialThanks🐲********************** -->
-
 <a name="specialThanks"></a>
 
 ## 🤗 SpecialThanks
@@ -22,5 +21,7 @@ export function getSpecialThanks(form: TForm) {
       </a>
     </td>`).join('')}
   </tr>
-</table>`
+</table>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>`
 }

@@ -1,6 +1,15 @@
-import { getAboutProject, getBasicInformation, getBuildWith, getContactUs, getContributors, getFAQ, getGifsPrints, getHowToUse, getSpecialThanks, getTableOfContents } from './getReadme'
+import {
+  getAboutProject,
+  getBasicInformation,
+  getBuildWith, getContactUs,
+  getContributors,
+  getFAQ,
+  getGifsPrints,
+  getHowToUse,
+  getSpecialThanks,
+  getTableOfContents,
+  getDocsLink } from './getReadme'
 import { TForm } from '@/@types/form'
-import { getDocsLink } from './getReadme/getDocsLink'
 
 export function getMarkdownCode(form: TForm) {
   const string
