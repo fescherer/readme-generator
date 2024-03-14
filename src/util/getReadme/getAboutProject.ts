@@ -6,8 +6,7 @@ export function getAboutProject(form: TForm) {
   const field = form?.basicInformation
   if (!field || !field?.description) return ``
   else
-    return `\n
-<!-- **********************🐲About🐲********************** -->
+    return `\n<!-- **********************🐲About🐲********************** -->
 <a name="aboutProject"></a>
 
 ## 📕 About

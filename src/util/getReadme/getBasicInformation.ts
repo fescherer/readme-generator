@@ -23,20 +23,15 @@ export function getBasicInformation(form: TForm) {
 
   return `
 <a name="readme-top"></a>
-
-<div align="center">
 ${field.hasStarsBadge ? starsShield : ''}${field.hasContributorsBadge ? contributorsShield : ''}${field.hasForksBadge ? forksShield : ''}${field.hasLicenseBadge ? licenseShield : ''}${field.hasContributing ? contributingShield : ''}${field.hasIssuesBadge ? issueShield : ''}
 
-<br />
 <a href="https://github.com/${field.repo}">
-  <img src="${field.projectImage}" alt="Logo" width="80" height="80">
+<img src="${field.projectImage}" alt="Logo" width="80" height="80">
 </a>
 
 <h3 align="center">${field.projectName}</h3>
 
 ${field.shortDescription}
-
-</div>
 
 <!-- Badges -->${field.hasStarsBadge ? starsShieldURL : ''}${field.hasContributorsBadge ? contributorsShieldURL : ''}${field.hasForksBadge ? forksShieldURL : ''}${field.hasLicenseBadge ? licenseShieldURL : ''}${field.hasContributing ? contributingShieldURL : ''}${field.hasIssuesBadge ? issuesShieldURL : ''}`
 }

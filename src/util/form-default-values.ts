@@ -8,32 +8,34 @@ export const defaultValues: TForm = {
     shortDescription: '',
     description: '',
 
-    hasStarsBadge: true,
-    hasContributorsBadge: true,
-    hasForksBadge: true,
-    hasLicenseBadge: true,
-    hasContributing: true,
-    hasIssuesBadge: true,
+    hasStarsBadge: false,
+    hasContributorsBadge: false,
+    hasForksBadge: false,
+    hasLicenseBadge: false,
+    hasContributing: false,
+    hasIssuesBadge: false,
+
+    docsLink: '',
   },
   buildWith: {
-    enabled: true,
+    enabled: false,
     items: [],
     customItems: [],
   },
   contactUs: {
-    enabled: true,
+    enabled: false,
     items: [],
   },
   contributors: {
-    enabled: true,
+    enabled: false,
     items: [],
   },
   faq: {
-    enabled: true,
+    enabled: false,
     items: [],
   },
   howToUse: {
-    enabled: true,
+    enabled: false,
     items: [
       { title: 'Clone repository', text: 'git clone <repo-name>', keyId: Math.random().toString() },
       { title: 'Install dependencies', text: 'pnpm install', keyId: Math.random().toString() },
@@ -41,14 +43,14 @@ export const defaultValues: TForm = {
     ],
   },
   gifsPrints: {
-    enabled: true,
+    enabled: false,
     items: [],
   },
   specialThanks: {
-    enabled: true,
+    enabled: false,
     items: [],
   },
   tableOfContent: {
-    enabled: true,
+    enabled: false,
   },
 }

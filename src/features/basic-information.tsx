@@ -43,6 +43,12 @@ export function BasicInformation() {
       <Switch defaultChecked label="How to Contribute badge" registerName="basicInformation.hasContributing" hint="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors" />
       <Switch defaultChecked label="Issues badge" registerName="basicInformation.hasIssuesBadge" />
       <Switch defaultChecked label="Table of content" registerName="tableOfContent.enabled" />
+
+      <Text
+        label="Doc's link"
+        registerName="basicInformation.docsLink"
+        placeholder="https://docs.amazing-project.dev"
+      />
     </div>
   )
 }

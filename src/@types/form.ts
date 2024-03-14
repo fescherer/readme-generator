@@ -27,6 +27,8 @@ export type TBasicInformation = {
   hasLicenseBadge: boolean
   hasContributing: boolean
   hasIssuesBadge: boolean
+
+  docsLink?: string
 }
 
 export type TEnabled = {
