@@ -1,8 +1,10 @@
 'use client'
 
 import { Switch } from '@/components/form-field-react-hook-form/switch'
+import { SwitchGroup } from '@/components/form-field-react-hook-form/switch-group'
 import { Text } from '@/components/form-field-react-hook-form/text'
 import { Textarea } from '@/components/form-field-react-hook-form/textarea'
+import { BASIC_BADGES_INFO } from '@/util/basic-badges-info'
 
 export function BasicInformation() {
   return (
@@ -36,12 +38,7 @@ export function BasicInformation() {
       />
 
       <Textarea registerName="basicInformation.description" label="Project description" placeholder="This project is a readme generator that help you create nice readme files for your projects easy peasy" required />
-      <Switch defaultChecked label="Stars badge" registerName="basicInformation.hasStarsBadge" />
-      <Switch defaultChecked label="Contributors badge" registerName="basicInformation.hasContributorsBadge" />
-      <Switch defaultChecked label="Forks badges" registerName="basicInformation.hasForksBadge" />
-      <Switch defaultChecked label="License badge" registerName="basicInformation.hasLicenseBadge" hint="https://choosealicense.com" />
-      <Switch defaultChecked label="How to Contribute badge" registerName="basicInformation.hasContributing" hint="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors" />
-      <Switch defaultChecked label="Issues badge" registerName="basicInformation.hasIssuesBadge" />
+      <SwitchGroup registerName="basicInformation.badges" switches={BASIC_BADGES_INFO} />
       <Switch defaultChecked label="Table of content" registerName="tableOfContent.enabled" />
 
       <Text

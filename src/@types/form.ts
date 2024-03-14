@@ -21,12 +21,7 @@ export type TBasicInformation = {
   shortDescription: string
   description: string
 
-  hasStarsBadge: boolean
-  hasContributorsBadge: boolean
-  hasForksBadge: boolean
-  hasLicenseBadge: boolean
-  hasContributing: boolean
-  hasIssuesBadge: boolean
+  badges: TItemImage[]
 
   docsLink?: string
 }

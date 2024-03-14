@@ -8,12 +8,7 @@ export const defaultValues: TForm = {
     shortDescription: '',
     description: '',
 
-    hasStarsBadge: false,
-    hasContributorsBadge: false,
-    hasForksBadge: false,
-    hasLicenseBadge: false,
-    hasContributing: false,
-    hasIssuesBadge: false,
+    badges: [],
 
     docsLink: '',
   },

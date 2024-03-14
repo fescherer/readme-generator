@@ -1,6 +1,5 @@
-import { TItemImage } from '@/@types/item'
-import { slugfy } from '../slugfy'
 import { TForm } from '@/@types/form'
+import { generateBadges, generateURL } from '../generateMarkdownBadges'
 
 export function getBuildWith(form: TForm) {
   const field = form?.buildWith
@@ -11,20 +10,6 @@ export function getBuildWith(form: TForm) {
 
   const badgesTechnologiesURL = generateURL(field?.items)
   const badgesCustomTechnologiesURL = generateURL(field?.customItems)
-
-  function generateBadges(arr: TItemImage[]) {
-    return arr?.map((item: TItemImage) => {
-      const slug = slugfy(item.alt)
-      return `[![${item?.alt}][${slug}-shield]][${slug}-url]`
-    })
-  }
-
-  function generateURL(arr: TItemImage[]) {
-    return arr?.map((item: TItemImage) => {
-      const slug = slugfy(item.alt)
-      return `[${slug}-shield]: ${item.image}\n[${slug}-url]: ${item.link}`
-    })
-  }
 
   return `\n
 <!-- **********************🐲Built With🐲********************** -->

@@ -10,6 +10,7 @@ import {
   getTableOfContents,
   getDocsLink } from './getReadme'
 import { TForm } from '@/@types/form'
+import { getBasicBadges } from './getReadme/getBasicBadges'
 
 export function getMarkdownCode(form: TForm) {
   const string
@@ -22,11 +23,13 @@ export function getMarkdownCode(form: TForm) {
 + getContributors(form)
 + getSpecialThanks(form)
 
-  const centerAligned = getBasicInformation(form)
+  const centerAligned = getBasicBadges(form)
+    + getBasicInformation(form)
     + getDocsLink(form)
     + getTableOfContents(form)
 
-  return `<div align="center">
+  return `<a name="readme-top"></a>
+<div align="center">
 ${centerAligned}
 
 </div>
