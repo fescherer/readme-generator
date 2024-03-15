@@ -19,39 +19,60 @@ const config = {
     },
     extend: {
       colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+        'title': '#27272a',
+        'subtitle': '#52525b',
+        'on': {
+          primary: '#f4f4f5',
         },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+        'form': {
+          title: '#52525b',
+          placeholder: '#a1a1aa',
+          value: '#52525b',
+          highlight: '#18181b',
         },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
-        },
+
+        'background': '#f8fafc',
+        'foreground': '#f1f5f9',
+        'foreground-2': '#fafafa',
+        'highlight': '#475569',
+      },
+      fontSize: {
+        'title': [
+          '1.25rem', {
+            lineHeight: '1.75rem',
+            fontWeight: 600,
+          },
+        ],
+        'subtitle': [
+          '0.875rem', {
+            lineHeight: '1.25rem',
+          },
+        ],
+        'on-primary': [
+          '0.875rem', {
+            lineHeight: '1.25rem',
+          },
+        ],
+        'form-title': [
+          '1rem', {
+            lineHeight: '1.5rem',
+          },
+        ],
+        'form-placeholder': [
+          '0.875rem', {
+            lineHeight: '1.25rem',
+          },
+        ],
+        'form-value': [
+          '0.875rem', {
+            lineHeight: '1.25rem',
+          },
+        ],
+        'form-hightlight': [
+          '0.875rem', {
+            lineHeight: '1.25rem',
+          },
+        ],
       },
       borderRadius: {
         lg: 'var(--radius)',

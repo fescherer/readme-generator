@@ -1,6 +1,7 @@
 'use client'
+import { TForm } from '@/@types/form'
+import { BuildWithHelp } from '@/components/HelpPopover/build-with-help'
 import { SectionCard } from '@/components/section-card'
-import { AboutProject } from '@/features/about-project'
 import { BasicInformation } from '@/features/basic-information'
 import { BuildWith } from '@/features/build-with'
 import { ContactUs } from '@/features/contact-us'
@@ -9,85 +10,80 @@ import { FAQ } from '@/features/faq'
 import { GifsPrints } from '@/features/gifs-prints'
 import { HowToUse } from '@/features/how-to-use'
 import { Preview } from '@/features/preview'
-import { ProjectInfo } from '@/features/project-info'
 import { SpecialThanks } from '@/features/special-thanks'
-import { Summary } from '@/features/summary'
+import { defaultValues } from '@/util/form-default-values'
 import { FormProvider, useForm } from 'react-hook-form'
 
 const items = [
   {
+    value: 'basic-information',
     title: 'Basic Information',
     description: 'Fill the obrigatory fields',
     children: <BasicInformation />,
   },
   {
-    title: 'Sumamry',
-    description: 'Sumamry',
-    children: <Summary />,
-  },
-  {
-    title: 'About Project',
-    description: 'Give a nice description',
-    children: <AboutProject />,
-  },
-  {
+    value: 'build-with',
     title: 'Build with',
-    description: 'Tecnologies used',
+    description: 'Technologies used',
     children: <BuildWith />,
+    helpPopover: <BuildWithHelp />,
   },
   {
-    title: 'Contact Us',
-    description: 'Find us in our socials',
-    children: <ContactUs />,
-  },
-  {
-    title: 'Contributors',
-    description: 'People who create the project',
-    children: <Contributors />,
-  },
-  {
-    title: 'FAQ',
-    description: 'QUESTIONS AND answers',
-    children: <FAQ />,
-  },
-  {
-    title: 'GIFS/PRINTS',
-    description: 'Gifs/Prints',
-    children: <GifsPrints />,
-  },
-  {
+    value: 'how-to-use',
     title: 'How to use',
     description:
       'To get this project up and running locally on your pc, follow the steps:',
     children: <HowToUse />,
   },
   {
-    title: 'Project Info',
-    description: 'Some project info',
-    children: <ProjectInfo />,
+    value: 'gifs-prints',
+    title: 'Gifs/Prints',
+    description: 'Gifs/Prints of your project',
+    children: <GifsPrints />,
   },
   {
+    value: 'faq',
+    title: 'FAQ',
+    description: 'Questions and answers about your project',
+    children: <FAQ />,
+  },
+  {
+    value: 'contact-us',
+    title: 'Contact Us',
+    description: 'Find us in our socials',
+    children: <ContactUs />,
+  },
+  {
+    value: 'contributors',
+    title: 'Contributors',
+    description: 'People who create the project',
+    children: <Contributors />,
+  },
+  {
+    value: 'special-thanks',
     title: 'Special Thanks',
-    description: 'Give credtis for who help you',
+    description: 'Give credits for who help you',
     children: <SpecialThanks />,
   },
 ]
 
 export default function Home() {
-  const methods = useForm()
+  const methods = useForm<TForm>({ defaultValues })
 
   return (
     <FormProvider {...methods}>
+
       <main className="m-auto flex w-full max-w-5xl flex-col p-4">
         <h1 className="text-3xl font-medium underline">Markdown generator</h1>
 
         <div className="flex flex-col gap-1 md:flex-row">
-          <div className="flex flex-col gap-4 py-4">
+          <div className="flex max-w-[320px] flex-col gap-4 py-4">
             {items.map(item => (
               <SectionCard
                 key={item.title}
                 description={item.description}
                 title={item.title}
+                helpPopover={item?.helpPopover}
               >
                 {item.children}
               </SectionCard>
