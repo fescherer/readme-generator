@@ -10,7 +10,7 @@
 
   <br />
   <a href="https://github.com/fescherer/project-studies/tree/main/alura/game-dev">
-    <img src="https://user-images.githubusercontent.com/62115215/219967984-42253ac1-0f95-45ea-86ee-d29dfe050534.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/fescherer/readme-generator/assets/62115215/bdb73518-39a3-4ab0-b9c2-bb371041b322" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Game Dev</h3>
