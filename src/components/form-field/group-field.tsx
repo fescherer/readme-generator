@@ -52,7 +52,7 @@ export function GroupField({ label, children, displayType, obj, btnLabel, regist
           : displayType === 'image'
             ? <ListImage hasLabel={hasLabel} fields={fields as TItemImage[]} onClick={onRemove} />
             : displayType === 'text'
-              ? <ListText fields={fields} remove={remove} />
+              ? <ListText fields={fields as TItemText[]} remove={remove} />
               : <></>
       }
 
